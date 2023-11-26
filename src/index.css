@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.headingTwo{
+  @apply text-white sm:text-base lg:text-xl font-sans font-bold mb-4
+}
+.anchorTag{
+  @apply text-white text-base  font-sans no-underline block transition-all duration-300 ease-in-out leading-6 text-ellipsis font-[10rem]
+}
+
+.mainFooter{
+  background-color: #CB8342;
+}
+.bg-image{
+  background-image: url('.././src/assets/wallpaperflare.com_wallpaper\ \(16\).jpg');
+  background-size: cover;
+  background-position: center;
+  /* filter: brightness(0.6); */
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0rem;
+  z-index: -1;
+  height: 100vh;
+}
+.bg-image-1 {
+  background-image: url(".././src/assets/10001.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.6);
+  position: relative;
+  top: 0rem;
+  left: 0;
+  right: 0;
+  bottom: 0rem;
+  z-index: -1;
+  height: 100vh; 
+}
