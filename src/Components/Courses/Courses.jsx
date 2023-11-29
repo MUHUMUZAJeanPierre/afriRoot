@@ -1,6 +1,7 @@
 import React from 'react'
 import { CiSearch } from "react-icons/ci";
 import { Link } from 'react-router-dom';
+import array from './CoursesArray';
 
 const Courses = () => {
   return (
@@ -96,7 +97,7 @@ const Courses = () => {
                 </div>
                 </div>
                 {/* */}
-                <div className='flex justify-evenly content-center gap-10 flex-wrap mt-[4rem] '>
+                {/* <div className='flex justify-evenly content-center gap-10 flex-wrap mt-[4rem] '>
                     <Link className='bg-white w-[13rem] h-[13rem] block px-auto shadow-xl rounded-md'>
                         <img src="../../../src/assets/YuhiVMusinga.jpg" alt="" className='w-[8rem] h-[8rem] mx-auto my-3 pt-2' />
                         <h2 className='italic font-semibold font-serif flex justify-center'> Yuhi V Musinga </h2>
@@ -147,32 +148,16 @@ const Courses = () => {
                         <h2 className='italic font-semibold font-serif flex justify-center'> Yuhi V Musinga </h2>
                         <p className='italic font-serif flex justify-center pt-2'>1883-1994</p>
                     </Link>
-                    {/* <div className='bg-white w-[13rem] h-[13rem] block px-auto shadow-lg rounded-md'>
-                        <img src="../../../src/assets/YuhiVMusinga.jpg" alt="" className='w-[8rem] h-[8rem] mx-auto my-3 pt-2' />
-                        <h2 className='italic font-semibold font-serif flex justify-center'> Yuhi V Musinga </h2>
-                        <p className='italic font-serif flex justify-center pt-2'>1883-1994</p>
-                    </div> */}
-                    {/* <div className='bg-white w-[13rem] h-[13rem] block px-auto shadow-lg rounded-md'>
-                        <img src="../../../src/assets/YuhiVMusinga.jpg" alt="" className='w-[8rem] h-[8rem] mx-auto my-3 pt-2' />
-                        <h2 className='italic font-semibold font-serif flex justify-center'> Yuhi V Musinga </h2>
-                        <p className='italic font-serif flex justify-center pt-2'>1883-1994</p>
-                    </div>
-                    <div className='bg-white w-[13rem] h-[13rem] block px-auto shadow-lg rounded-md'>
-                        <img src="../../../src/assets/YuhiVMusinga.jpg" alt="" className='w-[8rem] h-[8rem] mx-auto my-3 pt-2' />
-                        <h2 className='italic font-semibold font-serif flex justify-center'> Yuhi V Musinga </h2>
-                        <p className='italic font-serif flex justify-center pt-2'>1883-1994</p>
-                    </div>
-                    <div className='bg-white w-[13rem] h-[13rem] block px-auto shadow-lg rounded-md'>
-                        <img src="../../../src/assets/YuhiVMusinga.jpg" alt="" className='w-[8rem] h-[8rem] mx-auto my-3 pt-2' />
-                        <h2 className='italic font-semibold font-serif flex justify-center'> Yuhi V Musinga </h2>
-                        <p className='italic font-serif flex justify-center pt-2'>1883-1994</p>
-                    </div>
-                    <div className='bg-white w-[13rem] h-[13rem] block px-auto shadow-lg rounded-md'>
-                        <img src="../../../src/assets/YuhiVMusinga.jpg" alt="" className='w-[8rem] h-[8rem] mx-auto my-3 pt-2' />
-                        <h2 className='italic font-semibold font-serif flex justify-center'> Yuhi V Musinga </h2>
-                        <p className='italic font-serif flex justify-center pt-2'>1883-1994</p>
-                    </div> */}
-                </div>
+                    
+                </div> */}
+                <div>
+                    {array.map((item,idx)=>{
+                        
+                        return
+                         <div>
+                            <img src={item} alt="" />
+                        </div>
+                    })}</div>
             </div>
         </div>
     </div>
