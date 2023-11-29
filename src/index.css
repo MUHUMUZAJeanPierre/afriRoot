@@ -37,3 +37,14 @@
   z-index: -1;
   height: 100vh; 
 }
+.userLogin{
+  background-image: url('.././src/assets/africulture.webp');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+}

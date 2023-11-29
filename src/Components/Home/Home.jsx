@@ -64,68 +64,13 @@ const Home = () => {
 
       <div className="">
         <div className="bg-image-1 lg:h-screen" />
-        <div className="flex flex-row     md:px-[4rem] md:pr-[8rem] relative ">
-          <div className="bg-white  md:absolute lg:w-[40%] md:w-[80%] md:items-start rounded-md py-8 space-y-8       md:top-[-38rem] md:left-[5rem] lg:top-[-40rem] lg:right-[10rem] lg:left-[40rem]     flex flex-col px-6 ">
-            <h2 style={{color: '#CB8342'}} className=" text-3xl font-semibold">
-              What we Offer in our courses
-            </h2>
-            <p className="max-w-lg text-[#3A3A3A]">
-            In the context of African culture, it might imply the core values, traditions,
-             and practices that have deep historical roots and form the basis of the diverse cultures found across the continent.
-            </p>
-            <ul className="list-none space-y-2 text-[#3A3A3A] font-semibold ">
-              <li className="space-x-2 flex flex-row items-center ">
-                <span style={{ backgroundColor: '#CB8342' }} className="rounded-full px-[0.5rem] py-[0.5rem] "></span>
-                <p>Cutural Development</p>
-              </li>
-              <li className="space-x-2 flex flex-row items-center ">
-                <span style={{ backgroundColor: '#CB8342' }} className=" rounded-full px-[0.5rem] py-[0.5rem] "></span>
-                <p>Cutural Development</p>
-              </li>
-              {/* <li className="space-x-2 flex flex-row items-center ">
-                <span className="bg-orange-600 rounded-full px-[0.5rem] py-[0.5rem] "></span>
-                <p>Digital Manufacturing training</p>
-              </li> */}
-              {/* <li className="space-x-2 flex flex-row items-center ">
-                <span className="bg-orange-600 rounded-full px-[0.5rem] py-[0.5rem] "></span>
-                <p>3D scanning and 3D printing</p>
-              </li> */}
-              {/* <li className="space-x-2 flex flex-row items-center ">
-                <span className="bg-orange-600 rounded-full px-[0.5rem] py-[0.5rem] "></span>
-                <p>Laser cutting and Engraving</p>
-              </li> */}
-              <li className="space-x-2 flex flex-row items-center ">
-                <span style={{ backgroundColor: '#CB8342' }} className=" rounded-full px-[0.5rem] py-[0.5rem] "></span>
-                <p>Cutural Development</p>
-              </li>
-              <li className="space-x-2 flex flex-row items-center ">
-                <span style={{ backgroundColor: '#CB8342' }} className=" rounded-full px-[0.5rem] py-[0.5rem] "></span>
-                <p>Cutural Development</p>
-              </li>
-              <li className="space-x-2 flex flex-row items-center ">
-                <span  style={{ backgroundColor: '#CB8342' }} className="rounded-full px-[0.5rem] py-[0.5rem] "></span>
-                <p>Cutural Development</p>
-              </li>
-              <li className="space-x-2 flex flex-row items-center ">
-                <span style={{ backgroundColor: '#CB8342' }} className="rounded-full px-[0.5rem] py-[0.5rem] "></span>
-                <p>Cutural Development</p>
-              </li>
-              <li className="space-x-2 flex flex-row items-center ">
-                <span  style={{ backgroundColor: '#CB8342' }} className="rounded-full px-[0.5rem] py-[0.5rem] "></span>
-                <p>Cutural Development</p>
-              </li>
-              <li className="space-x-2 flex flex-row items-center ">
-                <span style={{ backgroundColor: '#CB8342' }} className=" rounded-full px-[0.5rem] py-[0.5rem] "></span>
-                <p>Cutural Development</p>
-              </li>
-            </ul>
-            <div className="mt-10 pb-4">
-              <button className="px-10 py-3  border-2 border-orange-600  hover:text-white transition text-orange-600 hover:bg-orange-600  rounded-full ">
-                Learn more
-              </button>
+        <div>
+            <div>
+              
             </div>
-          </div>
+            <div></div>
         </div>
+      
       </div>
 
 

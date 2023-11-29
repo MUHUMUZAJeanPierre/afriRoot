@@ -46,22 +46,32 @@ const navbarClass = scrolling ? "bg-whiteScroll animate-fadeIn" : "";
             </a>
           </Link>
 
-           <Link to="programs"> 
-          <a href="" className="hover:underline px-2">
-            Todays history
-          </a>
+           <Link to="/history"> 
+            <a href="" className="hover:underline px-2">
+              Todays history
+            </a>
            </Link> 
 
-           <Link to="fabClass"> 
-          <a href="" className="hover:underline px-2">
-            Grades
-          </a>
+           <Link to="/grades"> 
+            <a href="" className="hover:underline px-2">
+              Grades
+            </a>
            </Link> 
 
-           <Link to="ourServices"> 
-          <a href="" className="hover:underline px-2">
-            About Us
-          </a>
+           <Link to="/about"> 
+              <a href="" className="hover:underline px-2">
+                About Us
+              </a>
+           </Link>
+           <Link to="/login"> 
+              <a href="" className="hover:underline px-2">
+                Login
+              </a>
+           </Link>
+           <Link to="signUp"> 
+              <a href="" className="hover:underline px-2">
+                signUp
+              </a>
            </Link>
         </div>
             <div className="lg:hidden text-4xl text-white " onClick={toogleModal}>

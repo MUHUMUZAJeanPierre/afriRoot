@@ -1,11 +1,12 @@
 import React from 'react'
 import { CiSearch } from "react-icons/ci";
+import { Link } from 'react-router-dom';
 
 const Courses = () => {
   return (
     <div>
         <div>
-            <div className=' w-full  h-[60rem] pt-[7rem] pl-14 '>
+            <div style={{background: '#FFFAF5'}} className=' w-full  h-[60rem] pt-[7rem] pl-14 '>
                 <div className='flex  justify-evenly '>
                     <p style={{ color: '#CB8342' }} className='font-semibold text-2xl font-serif'>From</p>
                     <p style={{ color: '#CB8342' }} className='font-semibold text-2xl font-serif'>End</p>
@@ -90,13 +91,68 @@ const Courses = () => {
                     <option value=""></option>
                 </select>
 
-                <div style={{ backgroundColor: '#CB8342' }} className='bg- text-white w-32 flex justify-center items-center text-4xl font-bold rounded-r-3xl  '>
+                <div style={{ backgroundColor: '#CB8342' }} className='bg-white text-white w-32 flex justify-center items-center text-4xl font-bold rounded-r-3xl  '>
                     <CiSearch/>
                 </div>
                 </div>
                 {/* */}
-                <div className='flex justify-evenly flex-wrap mt-[4rem] '>
-                    <div className='bg-white w-[13rem] h-[13rem] block px-auto shadow-xl rounded-md'>
+                <div className='flex justify-evenly content-center gap-10 flex-wrap mt-[4rem] '>
+                    <Link className='bg-white w-[13rem] h-[13rem] block px-auto shadow-xl rounded-md'>
+                        <img src="../../../src/assets/YuhiVMusinga.jpg" alt="" className='w-[8rem] h-[8rem] mx-auto my-3 pt-2' />
+                        <h2 className='italic font-semibold font-serif flex justify-center'> Yuhi V Musinga </h2>
+                        <p className='italic font-serif flex justify-center pt-2'>1883-1994</p>
+                    </Link>
+                    <Link className='bg-white w-[13rem] h-[13rem] block px-auto shadow-lg rounded-md'>
+                        <img src="../../../src/assets/YuhiVMusinga.jpg" alt="" className='w-[8rem] h-[8rem] mx-auto my-3 pt-2' />
+                        <h2 className='italic font-semibold font-serif flex justify-center'> Yuhi V Musinga </h2>
+                        <p className='italic font-serif flex justify-center pt-2'>1883-1994</p>
+                    </Link>
+                    <Link className='bg-white w-[13rem] h-[13rem] block px-auto shadow-lg rounded-md'>
+                        <img src="../../../src/assets/YuhiVMusinga.jpg" alt="" className='w-[8rem] h-[8rem] mx-auto my-3 pt-2' />
+                        <h2 className='italic font-semibold font-serif flex justify-center'> Yuhi V Musinga </h2>
+                        <p className='italic font-serif flex justify-center pt-2'>1883-1994</p>
+                    </Link>
+                    <Link className='bg-white w-[13rem] h-[13rem] block px-auto shadow-lg rounded-md'>
+                        <img src="../../../src/assets/YuhiVMusinga.jpg" alt="" className='w-[8rem] h-[8rem] mx-auto my-3 pt-2' />
+                        <h2 className='italic font-semibold font-serif flex justify-center'> Yuhi V Musinga </h2>
+                        <p className='italic font-serif flex justify-center pt-2'>1883-1994</p>
+                    </Link>
+                    <Link className='bg-white w-[13rem] h-[13rem] block px-auto shadow-lg rounded-md'>
+                        <img src="../../../src/assets/YuhiVMusinga.jpg" alt="" className='w-[8rem] h-[8rem] mx-auto my-3 pt-2' />
+                        <h2 className='italic font-semibold font-serif flex justify-center'> Yuhi V Musinga </h2>
+                        <p className='italic font-serif flex justify-center pt-2'>1883-1994</p>
+                    </Link>
+                    <Link className='bg-white w-[13rem] h-[13rem] block px-auto shadow-lg rounded-md'>
+                        <img src="../../../src/assets/YuhiVMusinga.jpg" alt="" className='w-[8rem] h-[8rem] mx-auto my-3 pt-2' />
+                        <h2 className='italic font-semibold font-serif flex justify-center'> Yuhi V Musinga </h2>
+                        <p className='italic font-serif flex justify-center pt-2'>1883-1994</p>
+                    </Link>
+                    <Link className='bg-white w-[13rem] h-[13rem] block px-auto shadow-lg rounded-md'>
+                        <img src="../../../src/assets/YuhiVMusinga.jpg" alt="" className='w-[8rem] h-[8rem] mx-auto my-3 pt-2' />
+                        <h2 className='italic font-semibold font-serif flex justify-center'> Yuhi V Musinga </h2>
+                        <p className='italic font-serif flex justify-center pt-2'>1883-1994</p>
+                    </Link>
+                    <Link className='bg-white w-[13rem] h-[13rem] block px-auto shadow-lg rounded-md'>
+                        <img src="../../../src/assets/YuhiVMusinga.jpg" alt="" className='w-[8rem] h-[8rem] mx-auto my-3 pt-2' />
+                        <h2 className='italic font-semibold font-serif flex justify-center'> Yuhi V Musinga </h2>
+                        <p className='italic font-serif flex justify-center pt-2'>1883-1994</p>
+                    </Link>
+                    <Link className='bg-white w-[13rem] h-[13rem] block px-auto shadow-lg rounded-md'>
+                        <img src="../../../src/assets/YuhiVMusinga.jpg" alt="" className='w-[8rem] h-[8rem] mx-auto my-3 pt-2' />
+                        <h2 className='italic font-semibold font-serif flex justify-center'> Yuhi V Musinga </h2>
+                        <p className='italic font-serif flex justify-center pt-2'>1883-1994</p>
+                    </Link>
+                    <Link className='bg-white w-[13rem] h-[13rem] block px-auto shadow-lg rounded-md'>
+                        <img src="../../../src/assets/YuhiVMusinga.jpg" alt="" className='w-[8rem] h-[8rem] mx-auto my-3 pt-2' />
+                        <h2 className='italic font-semibold font-serif flex justify-center'> Yuhi V Musinga </h2>
+                        <p className='italic font-serif flex justify-center pt-2'>1883-1994</p>
+                    </Link>
+                    {/* <div className='bg-white w-[13rem] h-[13rem] block px-auto shadow-lg rounded-md'>
+                        <img src="../../../src/assets/YuhiVMusinga.jpg" alt="" className='w-[8rem] h-[8rem] mx-auto my-3 pt-2' />
+                        <h2 className='italic font-semibold font-serif flex justify-center'> Yuhi V Musinga </h2>
+                        <p className='italic font-serif flex justify-center pt-2'>1883-1994</p>
+                    </div> */}
+                    {/* <div className='bg-white w-[13rem] h-[13rem] block px-auto shadow-lg rounded-md'>
                         <img src="../../../src/assets/YuhiVMusinga.jpg" alt="" className='w-[8rem] h-[8rem] mx-auto my-3 pt-2' />
                         <h2 className='italic font-semibold font-serif flex justify-center'> Yuhi V Musinga </h2>
                         <p className='italic font-serif flex justify-center pt-2'>1883-1994</p>
@@ -115,62 +171,7 @@ const Courses = () => {
                         <img src="../../../src/assets/YuhiVMusinga.jpg" alt="" className='w-[8rem] h-[8rem] mx-auto my-3 pt-2' />
                         <h2 className='italic font-semibold font-serif flex justify-center'> Yuhi V Musinga </h2>
                         <p className='italic font-serif flex justify-center pt-2'>1883-1994</p>
-                    </div>
-                    <div className='bg-white w-[13rem] h-[13rem] block px-auto shadow-lg rounded-md'>
-                        <img src="../../../src/assets/YuhiVMusinga.jpg" alt="" className='w-[8rem] h-[8rem] mx-auto my-3 pt-2' />
-                        <h2 className='italic font-semibold font-serif flex justify-center'> Yuhi V Musinga </h2>
-                        <p className='italic font-serif flex justify-center pt-2'>1883-1994</p>
-                    </div>
-                    <div className='bg-white w-[13rem] h-[13rem] block px-auto shadow-lg rounded-md'>
-                        <img src="../../../src/assets/YuhiVMusinga.jpg" alt="" className='w-[8rem] h-[8rem] mx-auto my-3 pt-2' />
-                        <h2 className='italic font-semibold font-serif flex justify-center'> Yuhi V Musinga </h2>
-                        <p className='italic font-serif flex justify-center pt-2'>1883-1994</p>
-                    </div>
-                    <div className='bg-white w-[13rem] h-[13rem] block px-auto shadow-lg rounded-md'>
-                        <img src="../../../src/assets/YuhiVMusinga.jpg" alt="" className='w-[8rem] h-[8rem] mx-auto my-3 pt-2' />
-                        <h2 className='italic font-semibold font-serif flex justify-center'> Yuhi V Musinga </h2>
-                        <p className='italic font-serif flex justify-center pt-2'>1883-1994</p>
-                    </div>
-                    <div className='bg-white w-[13rem] h-[13rem] block px-auto shadow-lg rounded-md'>
-                        <img src="../../../src/assets/YuhiVMusinga.jpg" alt="" className='w-[8rem] h-[8rem] mx-auto my-3 pt-2' />
-                        <h2 className='italic font-semibold font-serif flex justify-center'> Yuhi V Musinga </h2>
-                        <p className='italic font-serif flex justify-center pt-2'>1883-1994</p>
-                    </div>
-                    <div className='bg-white w-[13rem] h-[13rem] block px-auto shadow-lg rounded-md'>
-                        <img src="../../../src/assets/YuhiVMusinga.jpg" alt="" className='w-[8rem] h-[8rem] mx-auto my-3 pt-2' />
-                        <h2 className='italic font-semibold font-serif flex justify-center'> Yuhi V Musinga </h2>
-                        <p className='italic font-serif flex justify-center pt-2'>1883-1994</p>
-                    </div>
-                    <div className='bg-white w-[13rem] h-[13rem] block px-auto shadow-lg rounded-md'>
-                        <img src="../../../src/assets/YuhiVMusinga.jpg" alt="" className='w-[8rem] h-[8rem] mx-auto my-3 pt-2' />
-                        <h2 className='italic font-semibold font-serif flex justify-center'> Yuhi V Musinga </h2>
-                        <p className='italic font-serif flex justify-center pt-2'>1883-1994</p>
-                    </div>
-                    <div className='bg-white w-[13rem] h-[13rem] block px-auto shadow-lg rounded-md'>
-                        <img src="../../../src/assets/YuhiVMusinga.jpg" alt="" className='w-[8rem] h-[8rem] mx-auto my-3 pt-2' />
-                        <h2 className='italic font-semibold font-serif flex justify-center'> Yuhi V Musinga </h2>
-                        <p className='italic font-serif flex justify-center pt-2'>1883-1994</p>
-                    </div>
-                    <div className='bg-white w-[13rem] h-[13rem] block px-auto shadow-lg rounded-md'>
-                        <img src="../../../src/assets/YuhiVMusinga.jpg" alt="" className='w-[8rem] h-[8rem] mx-auto my-3 pt-2' />
-                        <h2 className='italic font-semibold font-serif flex justify-center'> Yuhi V Musinga </h2>
-                        <p className='italic font-serif flex justify-center pt-2'>1883-1994</p>
-                    </div>
-                    <div className='bg-white w-[13rem] h-[13rem] block px-auto shadow-lg rounded-md'>
-                        <img src="../../../src/assets/YuhiVMusinga.jpg" alt="" className='w-[8rem] h-[8rem] mx-auto my-3 pt-2' />
-                        <h2 className='italic font-semibold font-serif flex justify-center'> Yuhi V Musinga </h2>
-                        <p className='italic font-serif flex justify-center pt-2'>1883-1994</p>
-                    </div>
-                    <div className='bg-white w-[13rem] h-[13rem] block px-auto shadow-lg rounded-md'>
-                        <img src="../../../src/assets/YuhiVMusinga.jpg" alt="" className='w-[8rem] h-[8rem] mx-auto my-3 pt-2' />
-                        <h2 className='italic font-semibold font-serif flex justify-center'> Yuhi V Musinga </h2>
-                        <p className='italic font-serif flex justify-center pt-2'>1883-1994</p>
-                    </div>
-                    <div className='bg-white w-[13rem] h-[13rem] block px-auto shadow-lg rounded-md'>
-                        <img src="../../../src/assets/YuhiVMusinga.jpg" alt="" className='w-[8rem] h-[8rem] mx-auto my-3 pt-2' />
-                        <h2 className='italic font-semibold font-serif flex justify-center'> Yuhi V Musinga </h2>
-                        <p className='italic font-serif flex justify-center pt-2'>1883-1994</p>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>
