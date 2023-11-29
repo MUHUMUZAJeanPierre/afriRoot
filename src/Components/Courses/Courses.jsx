@@ -8,14 +8,14 @@ const Courses = () => {
     <div>
         <div>
             <div style={{background: '#FFFAF5'}} className=' w-full  h-[60rem] pt-[7rem] pl-14 '>
-                <div className='flex  justify-evenly '>
-                    <p style={{ color: '#CB8342' }} className='font-semibold text-2xl font-serif'>From</p>
-                    <p style={{ color: '#CB8342' }} className='font-semibold text-2xl font-serif'>End</p>
-                    <p style={{ color: '#CB8342' }} className='font-semibold text-2xl font-serif mr-[4rem]'>Country</p>
+                <div className='flex  justify-evenly pr-36 mb-[-1rem]'>
+                    <p style={{ color: '#CB8342' }} className='font-serif pl-[7rem]'>From</p>
+                    <p style={{ color: '#CB8342'}} className=' text-lg font-serif '>To</p>
+                    <p style={{ color: '#CB8342' }} className=' text- font-serif pr-[10rem]'>Country</p>
                     
                 </div>
                 <div className='flex px-[15rem] py-4'>
-                <select name="" id="" className='w-[18rem] h-[3rem] rounded-l-3xl border-2 border-[#CB8342] focus:outline-none font-serif ' >
+                <select name="" id="" className='w-[12rem] h-[3rem] pl-10 rounded-l-3xl border-2 border-[#CB8342] focus:outline-none font-serif ' >
                     <option value="" style={{ color: '#CB8342' }}>From</option>
                     <option value="">1970</option>
                     <option value="">1971</option>
@@ -48,8 +48,8 @@ const Courses = () => {
                     <option value="">1998</option>
                     <option value="">1999</option>
                 </select>
-                <select name="" id="" className='w-[20rem] h-[3rem] border-2 border-[#CB8342] focus:outline-none font-serif'>
-                    <option value="" style={{ color: '#CB8342' }}>End</option>
+                <select name="" id="" className='w-[12rem] h-[3rem] pl-10 border-2 border-[#CB8342] focus:outline-none font-serif'>
+                    <option value="" style={{ color: '#CB8342' }}>To</option>
                     <option value="">1970</option>
                     <option value="">1971</option>
                     <option value="">1972</option>
@@ -81,7 +81,7 @@ const Courses = () => {
                     <option value="">1998</option>
                     <option value="">1999</option>
                 </select>
-                <select name="" id="" className='w-[20rem] h-[3rem] focus:outline-none font-serif border-2 border-[#CB8342]' >
+                <select name="" id="" className='w-[12rem] h-[3rem] pl-2  focus:outline-none font-serif border-2 border-[#CB8342]' >
                     <option value="" style={{ color: '#CB8342' }}>Country</option>
                     <option value="" >Rwanda</option>
                     <option value="">Uganda</option>
@@ -92,12 +92,12 @@ const Courses = () => {
                     <option value=""></option>
                 </select>
 
-                <div style={{ backgroundColor: '#CB8342' }} className='bg-white text-white w-32 flex justify-center items-center text-4xl font-bold rounded-r-3xl  '>
+                <div style={{ backgroundColor: '#CB8342' }} className='bg-white text-white w-[6rem] flex justify-center items-center text-4xl font-bold rounded-r-3xl  '>
                     <CiSearch/>
                 </div>
                 </div>
                 {/* */}
-                {/* <div className='flex justify-evenly content-center gap-10 flex-wrap mt-[4rem] '>
+                <div className='flex justify-evenly content-center gap-10 flex-wrap mt-[4rem] '>
                     <Link className='bg-white w-[13rem] h-[13rem] block px-auto shadow-xl rounded-md'>
                         <img src="../../../src/assets/YuhiVMusinga.jpg" alt="" className='w-[8rem] h-[8rem] mx-auto my-3 pt-2' />
                         <h2 className='italic font-semibold font-serif flex justify-center'> Yuhi V Musinga </h2>
@@ -149,15 +149,15 @@ const Courses = () => {
                         <p className='italic font-serif flex justify-center pt-2'>1883-1994</p>
                     </Link>
                     
-                </div> */}
-                <div>
+                </div>
+                {/* <div>
                     {array.map((item,idx)=>{
                         
                         return
                          <div>
                             <img src={item} alt="" />
                         </div>
-                    })}</div>
+                    })}</div> */}
             </div>
         </div>
     </div>

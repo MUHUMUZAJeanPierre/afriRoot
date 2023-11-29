@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 .headingTwo{
-  @apply text-white sm:text-base lg:text-xl font-sans font-bold mb-4
+  @apply text-white sm:text-base  font-sans font-bold mb-4
 }
 .anchorTag{
-  @apply text-white text-base  font-sans no-underline block transition-all duration-300 ease-in-out leading-6 text-ellipsis font-[10rem]
+  @apply text-white text-base  font-sans no-underline block transition-all duration-300 ease-in-out leading-5 text-ellipsis 
 }
 
 .mainFooter{
-  background-color: #CB8342;
+  background-color: #A16733;
 }
 .bg-image{
   background-image: url('.././src/assets/wallpaperflare.com_wallpaper\ \(16\).jpg');

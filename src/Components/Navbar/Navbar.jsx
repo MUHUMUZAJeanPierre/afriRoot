@@ -24,17 +24,17 @@ useEffect(()=>{
     window.removeEventListener("scroll", handleScroll);
   };
 }, []);
-const navbarClass = scrolling ? "bg-whiteScroll animate-fadeIn" : "";
+const navbarClass = scrolling ? "bg-whiteScroll " : "bg-whiteScroll ";
   return (
     <>
       <div className={`fixed md:px-14 flex w-full font-serif  p-4 lg:px-20 justify-between items-center z-40 ${navbarClass}`}>
-        <div style={{color: '#CB8342'}} className=" font-bold  text-4xl italic">
+        <div style={{color: '#CB8342'}} className=" font-normal   text-xl italic">
           <p>AFRI ROOT</p>
         </div>
 
         {/* navigation */}
 
-        <div  className="hidden lg:flex lg:space-x-4 font-semibold text-xl  index font-serif   " style={{color: '#CB8342'}}>
+        <div  className="hidden lg:flex lg:space-x-4 font-normal  index font-serif" style={{color: '#CB8342'}}>
           <Link to="/">
           <a  href="" className="hover:underline px-2">
               Home
@@ -74,7 +74,7 @@ const navbarClass = scrolling ? "bg-whiteScroll animate-fadeIn" : "";
               </a>
            </Link>
         </div>
-            <div className="lg:hidden text-4xl text-white " onClick={toogleModal}>
+            <div className="lg:hidden text-xl text-white " onClick={toogleModal}>
                 <BiMenuAltRight className="bg-black" />
             </div>
         {/* </div> */}

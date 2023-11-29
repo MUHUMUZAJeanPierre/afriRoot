@@ -14,16 +14,16 @@ const Home = () => {
           <div className='flex justify-evenly py-44'>
             <div className=' my-20' >
               <div>
-                <h1 style={{color: '#CB8342'}}  className='text-5xl font-semibold font-serif  w-[40rem]'>
+                <h1 style={{color: '#A16733'}} className='text-4xl font-semibold font-serif  w-[40rem]'>
                   Every man's ability may be strengthened or increased by culture
                 </h1>
               </div>
               {/* <Link className=''> */}
-                <button style={{ backgroundColor: '#CB8342' }} className='uppercase font-serif  text-[1rem] font-semibold my-10 flex justify-center items-center py-3 mx-  xl:w-[14rem] border-2 hover:text-white transition text-white rounded-full xl:text-3xl pt-2 md:text-5xl '>
+                <button style={{ backgroundColor: '#A16733' }} className=' font-normal font-serif  text-[1rem]  my-10 flex justify-center items-center py-3 mx-  xl:w-[18rem] border hover:text-white transition text-white rounded-lg xl:text-3xl pt-2 md:text-5xl '>
                   Register 
                 </button>
             </div>
-            <div className=' w-[30rem] h-[10rem]'>
+            <div className=' w-[27rem] h-[7rem]'>
               <img src="../../../src/assets/pnglogo.png" alt="" className='' />
             </div>
 

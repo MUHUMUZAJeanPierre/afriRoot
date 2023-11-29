@@ -7,7 +7,7 @@ import { FaFacebookF } from "react-icons/fa";
 const SinUp = () => {
   return (
     <>
-    <div className=' w-full h-[60rem] py-[4rem]'>
+    <div style={{background: '#FFFAF5'}} className=' w-full h-[60rem] py-[4rem]'>
         <div className=' w-[70rem] h-[50rem] mx-auto my-auto'>
             <div className='h-[35rem] w-[33rem]'>
                 <h1 className='font-semibold text-3xl mx-10 mt-9'>Sign Up</h1>
@@ -36,7 +36,7 @@ const SinUp = () => {
                     <input type="text" required="required" placeholder='Enter Password' className='h-15 w-[40rem] border-2  border-black rounded-lg p-4 text-black'/>
                 </div>
                 <div className='mx-10 my-9'>
-                    <button style={{background: '#CB8342'}} className='  text-white rounded-xl h-[4.5rem] w-[40rem] text-2xl  font-semibold'>Sign Up</button>
+                    <button style={{background: '#CB8342'}} className='  text-white rounded-lg h-[4rem] w-[40rem] text-2xl  font-semibold'>Sign Up</button>
                 </div>
                 <div>
                     <p className='flex justify-center font-semibold'>You can login with: </p>
