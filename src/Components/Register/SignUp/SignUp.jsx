@@ -6,8 +6,8 @@ import {FaFacebookF} from 'react-icons/fa';
 const SignUp = () => {
   return (
     <div className='bg-orange-500 w-full h-[50rem] py-[2rem]'>
-        <div className=' bg-white w-[70rem] h-[47rem] flex justify-evenly items-center mx-auto'>
-            <div className='bg-green-500 h-[45rem] w-[33rem]'>
+        <div className=' bg-white w-[80rem] h-[47rem] flex justify-evenly items-center mx-auto'>
+            <div className='bg-green-500 h-[43rem] w-[36rem]'>
                 <h1 className='font-semibold font-serif text-5xl mx-10 mt-9'>Student SignUp</h1>
                 <p className='mx-10 mb-5 mt-1'>If you have already an account, You can
                     <Link to="/signUp" className='underline text text-orange-700 ml-[1rem]'>
@@ -25,19 +25,19 @@ const SignUp = () => {
                 </div>
                 <div>
                     <p className='text-center '>Or sign up with</p>
-                    <div className='flex justify-evenly mt-10'>
+                    <div className='flex justify-evenly mt-5'>
                         <button className='bg-white border-2 border-red-500 px-16 py-4 rounded-md' >
                             <FaGoogle className='text-red-500 '/>
                         </button >
-                        <button className='bg-white border-2 border-blue-500 px-16 py-4 rounded-md'>
+                        <button className='bg-white border-2 border-blue-500 px-16 py-3 rounded-md'>
                             <FaFacebookF className='text-blue-500'/>
                         </button>
                     </div>
                 </div>
             </div>
             <div>
-            <div className='bg-blue-500 h-[45rem] w-[35rem] '>
-                <img src="../../../../src/assets/pnglogo.png" alt=""  className='h-[45rem] w-[35rem]'/>
+            <div className='bg-blue-500 h-[43rem] w-[36rem] '>
+                <img src="../../../../src/assets/pnglogo.png" alt=""  className='h-[45rem] w-[36rem]'/>
             </div>
             </div>
         </div>
