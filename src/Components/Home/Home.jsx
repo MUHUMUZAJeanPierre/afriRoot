@@ -10,20 +10,20 @@ const Home = () => {
     <div >
 
       {/* Home image  */}
-        <div className=' bg-image bg-cover bg-center'>
+        <div className=' bg-image  bg-cover bg-center bg-'>
           <div className='flex justify-evenly py-44'>
-            <div className=' my-20' >
+            <div className=' my-20 lg:10 mx-3' >
               <div>
-                <h1 style={{color: '#A16733'}} className='text-4xl font-semibold font-serif  w-[40rem]'>
+                <h1 style={{color: '#A16733'}} className='lg:text-4xl text-lg font-semibold font-serif '>
                   Every man's ability may be strengthened or increased by culture
                 </h1>
               </div>
               {/* <Link className=''> */}
-                <button style={{ backgroundColor: '#A16733' }} className=' font-normal font-serif   my-8 flex justify-center items-center py-3 xl:w-[18rem] border hover:text-white transition text-white rounded-lg xl:text-3xl pt-2 md:text-5xl '>
+                <button style={{ backgroundColor: '#A16733' }} className=' font-normal font-serif    my-8 flex justify-center items-center py-3 xl:w-[18rem] w-[15rem] border hover:text-white transition text-white rounded-lg xl:text-3xl pt-2 md:text-5xl '>
                   Register 
                 </button>
             </div>
-            <div className=' w-[27rem] h-[7rem]'>
+            <div className='xl:my-[-2rem] my-[4rem] lg:my-[1rem] xl:w-[27rem] lg:w-[]  h-[7rem]'>
               <img src="../../../src/assets/pnglogo.png" alt="" className='' />
             </div>
 
@@ -31,7 +31,7 @@ const Home = () => {
         </div>
 
 {/* OUR HISTORY AND WHAT WE ARE  */}
-        <div className=' w-full pt-[4rem]'>
+        <div className=' w-full pt-[4rem] bg-red-700'>
         <div className=' md:flex justify-evenly  md:h-[30rem]'>
           <div className=' md:w-[37rem] pl-6 md:h-[29rem]'>
             {/* <div ></div> */}
@@ -62,7 +62,7 @@ const Home = () => {
 
       {/* COURSES THAT WE OFFERS */}
 
-      <div className="">
+      <div className="bg-green-500">
         <div className="bg-image-1 lg:h-screen" />
         <div>
             <div>
@@ -76,7 +76,7 @@ const Home = () => {
 
   {/* Our program */}
 
-  <div className="bg-[#F3F5F5] py-[6rem]">
+  <div className="bg-blue-900 py-[6rem]">
     <div className="space-y-[2rem]">
       <h2  style={{color: '#CB8342'}} className="text-center  font-semibold text-xl uppercase font-serif">
         Today's History
