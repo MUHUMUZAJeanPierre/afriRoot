@@ -2,8 +2,13 @@ import React from 'react'
 import { CiSearch } from "react-icons/ci";
 import { Link } from 'react-router-dom';
 import array from './CoursesArray';
+import CoursesArrays from './CoursesArray'
+import { useState } from 'react';
 
 const Courses = () => {
+    const [name, setName] = useState('')
+    const [year, setYear] = useState(0)
+    // const [employees, setEmployees] = useState([])
   return (
     <div>
         <div>
@@ -96,8 +101,7 @@ const Courses = () => {
                     <CiSearch/>
                 </div>
                 </div>
-                {/* */}
-                <div className='flex justify-evenly content-center gap-10 flex-wrap mt-[4rem] '>
+                {/* <div className='flex justify-evenly content-center gap-10 flex-wrap mt-[4rem] '>
                     <Link className='bg-white w-[13rem] h-[13rem] block px-auto shadow-xl rounded-md'>
                         <img src="../../../src/assets/YuhiVMusinga.jpg" alt="" className='w-[8rem] h-[8rem] mx-auto my-3 pt-2' />
                         <h2 className='italic font-semibold font-serif flex justify-center'> Yuhi V Musinga </h2>
@@ -149,15 +153,32 @@ const Courses = () => {
                         <p className='italic font-serif flex justify-center pt-2'>1883-1994</p>
                     </Link>
                     
+                </div> */}
+
+
+
+                <div className='flex justify-evenly flex-wrap content-center gap-10 mt-[4rem]'>
+                    { array.map((items)=>{
+                        // console.log(items)
+                        return(
+                            <>
+                            {/* <rrays  */}
+                            <div>
+                             name={items.name}
+                            </div>
+                            <div>
+                            year={items.role}
+                            </div>
+                            <div>
+                            img={items.img}
+                            </div>
+                            
+                            </>
+                        )
+                    })}
+
                 </div>
-                {/* <div>
-                    {array.map((item,idx)=>{
-                        
-                        return
-                         <div>
-                            <img src={item} alt="" />
-                        </div>
-                    })}</div> */}
+                
             </div>
         </div>
     </div>

@@ -8,7 +8,7 @@ const SinUp = () => {
   return (
     <>
     <div style={{background: '#FFFAF5'}} className=' w-full h-[60rem] py-[4rem]'>
-        <div  className=' lg:w-[40rem]  h-[39rem] shadow-black shadow-2xl mx-auto my-auto rounded-3xl'>
+        <div  className=' lg:w-[35rem]  h-[39rem] shadow-black shadow-2xl mx-auto my-auto rounded-3xl'>
             <div className='h-[36rem] w-[34rem] py-1'>
                 <h1 className='font-semibold text-3xl mx-10 mt-9 flex justify-center'>Sign Up</h1>
                 {/* <p className='mx-10 mb-5 mt-1'>Already have an account yet?  
@@ -20,23 +20,23 @@ const SinUp = () => {
                     <label htmlFor="" className='font-semibold '>
                         Enter your email
                     </label><br/>
-                    <input type="text" required='required'   placeholder='Enter your email' className='w-[35rem] h-12 border-2  border-black rounded-lg p-4 text-black '/><br/><br/>
+                    <input type="text" required='required'   placeholder='Enter your email' className='w-[28rem] h-12 border-2  border-black rounded-lg p-4 text-black '/><br/><br/>
                     <label htmlFor="" className='font-semibold '>
                         Full name
                     </label><br/>
-                    <input type="text" required='required'   placeholder='Full name' className='h-12 w-[35rem] border-2  border-black rounded-lg p-4 text-black'/><br/><br/>
+                    <input type="text" required='required'   placeholder='Full name' className='h-12 w-[28rem] border-2  border-black rounded-lg p-4 text-black'/><br/><br/>
                     <label htmlFor="" className='font-semibold '>
                         Last name
                     </label><br/>
-                    <input type="text" required='required'   placeholder='you@example.com' className='h-12 w-[35rem] border-2  border-black rounded-lg p-4 text-black'/><br/><br/>
+                    <input type="text" required='required'   placeholder='you@example.com' className='h-12 w-[28rem] border-2  border-black rounded-lg p-4 text-black'/><br/><br/>
                     <div className='flex'>
                     <label htmlFor="" className='font-semibold '>Enter password</label>
                     
                     </div>
-                    <input type="text" required="required" placeholder='Enter Password' className='h-12 w-[35rem] border-2  border-black rounded-lg p-4 text-black'/>
+                    <input type="text" required="required" placeholder='Enter Password' className='h-12 w-[28rem] border-2  border-black rounded-lg p-4 text-black'/>
                 </div>
                 <div className='mx-10 my-5'>
-                    <button style={{background: '#CB8342'}} className='  text-white rounded-3xl h-14 w-[35rem] text-2xl  font-semibold'>Sign Up</button>
+                    <button style={{background: '#CB8342'}} className='  text-white rounded-xl h-14 w-[28rem] text-2xl  font-semibold'>Sign Up</button>
                 </div>
                 <div className=' mt-9'>
                 <p className='flex justify-center  font-semibold'>Already have an account yet?  
