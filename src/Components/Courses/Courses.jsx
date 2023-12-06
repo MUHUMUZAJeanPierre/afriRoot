@@ -12,14 +12,14 @@ const Courses = () => {
   return (
     <div>
         <div>
-            <div style={{background: '#FFFAF5'}} className=' w-full  h-[60rem] pt-[7rem] pl-14 '>
+            <div style={{background: '#FFFAF5'}} className=' w-full  h-full lg:h-[80rem] pt-[7rem] pl-14 '>
                 <div className='flex  justify-evenly pr-36 mb-[-1rem]'>
                     <p style={{ color: '#CB8342' }} className='font-serif pl-[7rem]'>From</p>
                     <p style={{ color: '#CB8342'}} className=' text-lg font-serif '>To</p>
                     <p style={{ color: '#CB8342' }} className=' text- font-serif pr-[10rem]'>Country</p>
                     
                 </div>
-                <div className='flex px-[15rem] py-4'>
+                <div className='flex lg:px-[15rem] px-auto py-4'>
                 <select name="" id="" className='w-[12rem] h-[3rem] pl-10 rounded-l-3xl border-2 border-[#CB8342] focus:outline-none font-serif ' >
                     <option value="" style={{ color: '#CB8342' }}>From</option>
                     <option value="">1970</option>
@@ -96,7 +96,7 @@ const Courses = () => {
                     <option value="">Kenya</option>
                     <option value=""></option>
                 </select>
-
+                
                 <div style={{ backgroundColor: '#CB8342' }} className='bg-white text-white w-[6rem] flex justify-center items-center text-4xl font-bold rounded-r-3xl  '>
                     <CiSearch/>
                 </div>
@@ -157,20 +157,15 @@ const Courses = () => {
 
 
 
-                <div className='flex justify-evenly flex-wrap content-center gap-10 mt-[4rem]'>
-                    { array.map((items)=>{
-                        // console.log(items)
+                <div className='flex justify-evenly flex-wrap content-center gap-10 mt-[0rem] lg:mt-[rem] h-[90rem] lg:h-[60rem] cursor-pointer'>
+                    { array.map((items,idx )=>{
+                        console.log(items)
                         return(
                             <>
-                            {/* <rrays  */}
-                            <div>
-                             name={items.name}
-                            </div>
-                            <div>
-                            year={items.role}
-                            </div>
-                            <div>
-                            img={items.img}
+                            <div className='bg-white w-[13rem] h-[13rem] block px-auto shadow-lg rounded-md'>
+                            <img src={items.imgi} className='w-[8rem] h-[8rem] mx-auto my-3 pt-2' />
+                             <h1 className='italic font-semibold font-serif flex justify-center'>{items.name}</h1>
+                            <p className='italic font-serif flex justify-center pt-2'>{items.role}</p>
                             </div>
                             
                             </>

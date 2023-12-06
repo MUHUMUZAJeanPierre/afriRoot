@@ -10,7 +10,7 @@ const Home = () => {
     <div >
 
       {/* Home image  */}
-        <div className=' bg-image  bg-cover bg-center bg-'>
+        <div className=' bg-image  bg-cover bg-center'>
           <div className='flex justify-evenly py-44'>
             <div className=' my-20 lg:10 mx-3' >
               <div>
@@ -48,13 +48,12 @@ const Home = () => {
           </div>
           <div className=' md:h-[23rem] xl:w-[32rem] md:w-[30rem] sm:w-[10rem] sm:h-[40rem] block justify-end px-4 py-2 '>
             <span className='flex justify-end '>
-            <img src="../../../src/assets/10001.jpg" alt="" className=' mt-2 md:w-[29rem]'/>
+            {/* <img src="../../../src/assets/10001.jpg" alt="" className=' mt-2 md:w-[29rem]'/> */}
             </span>
 
             <span className=' flex justify-end '>
               <p style={{ color: '#CB8342' }} className='mt-3 bg-white italic font-bold'>AFRI ROOT </p>
             </span>
-            
           </div>
         </div>
       </div>
@@ -76,18 +75,13 @@ const Home = () => {
 
   {/* Our program */}
 
-  <div className="py-[6rem]">
-    <div className="space-y-[2rem]">
-      <h2  style={{color: '#CB8342'}} className="text-center  font-semibold text-xl uppercase font-serif">
-        Today's History
-      </h2>
-      {/* <p className="text-center text-[#3A3A3A]">Trending culture </p> */}
-    </div>
+  {/* <div className="py-[6rem]">
+    
     <div className="flex lg:flex-row md:flex-col space-y-6   flex-col p-[3rem] container mx-auto justify-around lg:space-x-8">
       <div className="bg-white rounded-lg p-6 mt-6 shadow-black shadow-xl">
         <h2  style={{color: '#CB8342'}} className="font-serif font-semibold text-lg flex flex-row items-center">
           <span className="text-3xl px-2">
-            <BiServer />
+            <BiServer className=' text-5xl' />
           </span>
           Comprehensive Cultural 
         </h2>
@@ -117,12 +111,48 @@ const Home = () => {
         <p className="max-w-md pl-16 text-[#3A3A3A]">
         Programs that apply cultural studies to real-world 
         scenarios, such as business practices, diplomacy, or intercultural communication. 
-        {/* This can be particularly useful in a globalized world where cultural competence is valuable. */}
         </p>
       </div>
     </div>
-      </div>
+      </div> */}
       
+
+      <div className=' h-full '>
+        <div className="space-y-[6rem] py-[5rem]">
+          <h2  style={{color: '#CB8342'}} className="text-center  font-semibold text-xl uppercase font-serif">
+            Today's History
+          </h2>
+        </div>
+        <div className='md:flex xl:justify-evenly h-full w-full gap-2 px-5 pb-[10rem] xl:pr-20 xl:pl-20'>
+        <div className='shadow-slate-300 shadow-xl sm:w-[70rem] xl:h-[28rem] border-2 border-gray-100  rounded-lg  hover:border-2 hover:border-#CB8342 hover:rounded-lg mt-3'>
+          <div style={{ backgroundColor: '#CB8342' }} className=' w-20 h-20 rounded-full flex items-center justify-center mt-6  ml-auto mr-auto '>
+            <BiServer  className=' text-white text-5xl  ' />
+          </div>
+          <h2 style={{color: '#CB8342'}}  className='-200 mt-5 flex justify-center font-semibold text-xl'>Comprehensive Cultural</h2>
+          <p className=' mt-14 ml-2'>        
+              A single comprehensive program that covers various aspects of the culture, including history, traditions, language, arts, and social practices.
+          </p>
+        </div>
+        <div className='shadow-slate-300 shadow-xl sm:w-[70rem] xl:h-[28rem] border-2 border-gray-100 rounded-lg  hover:border-2 hover:border-#CB8342 hover:rounded-lg mt-3'>
+          <div style={{ backgroundColor: '#CB8342' }} className=' w-20 h-20 rounded-full flex items-center justify-center ml-auto mr-auto mt-6'>
+            <FaGraduationCap className='text-white text-5xl' />
+          </div>
+          <h2 style={{color: '#CB8342'}} className=' mt-5 flex justify-center font-semibold text-xl'>Cultural Exchange Programs</h2>
+          <p className=' mt-14 ml-2'>
+            Programs that facilitate cultural exchange, either through travel or virtual means, providing participants with hands-on experiences and interactions with people from the culture
+          .</p>
+        </div>
+        <div className='shadow-slate-300 shadow-xl sm:w-[70rem] xl:h-[28rem] border-2 border-gray-100 rounded-lg  hover:border-2 hover:border-#CB8342 hover:rounded-lg mt-3'>
+          <div style={{ backgroundColor: '#CB8342' }}  className='  flex items-center justify-center w-20 h-20 rounded-full ml-auto mr-auto mt-6'>
+            <HiOutlineLightBulb className='text-white text-5xl'/>
+          </div>
+          <h2  style={{color: '#CB8342'}} className=' mt-5 flex justify-center font-semibold text-xl'>Applied Cultural Studies</h2>
+          <p className=' mt-14 ml-2'>
+            Programs that apply cultural studies to real-world scenarios, such as business practices, diplomacy, or intercultural communication.
+          </p>
+        </div>
+        </div>
+      </div>
 
       </div>
   )

@@ -8,7 +8,7 @@ const SinUp = () => {
   return (
     <>
     <div style={{background: '#FFFAF5'}} className=' w-full h-[60rem] py-[4rem]'>
-        <div  className=' lg:w-[35rem]  h-[39rem] shadow-black shadow-2xl mx-auto my-auto rounded-3xl'>
+        <div  className=' lg:w-[35rem]  h-[39rem] shadow-slate shadow-2xl mx-auto my-auto rounded-3xl'>
             <div className='h-[36rem] w-[34rem] py-1'>
                 <h1 className='font-semibold text-3xl mx-10 mt-9 flex justify-center'>Sign Up</h1>
                 {/* <p className='mx-10 mb-5 mt-1'>Already have an account yet?  

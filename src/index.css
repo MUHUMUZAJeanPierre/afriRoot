@@ -23,9 +23,24 @@
   bottom: 0rem;
   z-index: -1;
   height: 100vh;
+  background-attachment: fixed;
+}
+.bg-image-about{
+  background-image: url('.././src/assets/pnglogo.png');
+  background-size: cover;
+  background-position: center;
+  /* filter: brightness(0.9); */
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0rem;
+  z-index: -1;
+  height: 100vh;
+  background-attachment: fixed;
 }
 .bg-image-1 {
-  background-image: url(".././src/assets/10001.jpg");
+  background-image: url(".././src/assets/pnglogo.png");
   background-size: cover;
   background-position: center;
   filter: brightness(0.6);
@@ -36,6 +51,7 @@
   bottom: 0rem;
   z-index: -1;
   height: 100vh; 
+  background-attachment: fixed;
 }
 .userLogin{
   background-image: url('.././src/assets/africulture.webp');
