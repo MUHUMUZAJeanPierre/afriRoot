@@ -7,37 +7,37 @@ const Modal = () => {
   return (
     <div>
         
-        <div className=" md:hidden bg-red-500 lg:h-60 w-full absolute grid grid-cols-1 mt-16 px-[9rem] items-end">
+        <div style={{color: '#A16733'}} className="afriContainer pb-[2rem]  font-bold text-xl  bg-white h-[20rem] lg:h-60 w-full absolute grid grid-cols-1 mt-16 px-[1.5rem] items-end">
           <Link to="/">
-          <a href="" className="" >
+          <a href="" className="hover:underline" >
               Home
             </a>
           </Link>
           <Link to="/about">
-            <a href="" className="">
+            <a href="" className="hover:underline">
               About Us
             </a>
           </Link>
 
            <Link to="programs"> 
-          <a href="" className="">
+          <a href="" className="hover:underline">
             Courses
           </a>
            </Link> 
 
            <Link to="fabClass"> 
-          <a href="" className="">
+          <a href="" className="hover:underline">
             Today's history
           </a>
            </Link> 
 
            <Link to="ourServices"> 
-          <a href="" className="">
+          <a href="" className="hover:underline">
             Grades
           </a>
            </Link>
           <Link to="/dashboard">
-            <a href="" className="">
+            <a href="" className="hover:underline">
               Dashboard
             </a>
           </Link>

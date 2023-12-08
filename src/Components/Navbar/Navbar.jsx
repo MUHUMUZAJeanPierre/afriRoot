@@ -27,7 +27,7 @@ useEffect(()=>{
 const navbarClass = scrolling ? "bg-whiteScroll " : "bg-whiteScroll ";
   return (
     <>
-      <div className={`fixed md:px-14 flex w-full font-serif  p-4 lg:px-20 justify-between items-center z-40 ${navbarClass}`}>
+      <div className={` afriContainer fixed md:px-14 flex w-full font-serif  p-4 lg:px-20 justify-between items-center z-40 ${navbarClass}`}>
         <div style={{color: '#CB8342'}} className=" font-normal   text-xl italic">
           <p>AFRI ROOT</p>
         </div>
@@ -64,18 +64,21 @@ const navbarClass = scrolling ? "bg-whiteScroll " : "bg-whiteScroll ";
               </a>
            </Link>
            <Link to="/login"> 
-              <a href="" className="hover:underline px-2">
+              <button className="h-10 w-28 rounded-lg mt-[-1rem]" style={{backgroundColor: '#A16733'}}>
+              <a href="" className=" text-white hover:underline px-2">
                 Login
               </a>
+              </button>
+              
            </Link>
-           <Link to="signUp"> 
+           {/* <Link to="signUp"> 
               <a href="" className="hover:underline px-2">
                 signUp
               </a>
-           </Link>
+           </Link> */}
         </div>
             <div className="lg:hidden text-xl text-white " onClick={toogleModal}>
-                <BiMenuAltRight className="bg-black" />
+                <BiMenuAltRight style={{backgroundColor: '#A16733'}} className=" w-10 h-10 rounded-full" />
             </div>
         {/* </div> */}
         

@@ -43,15 +43,15 @@
   background-image: url(".././src/assets/pnglogo.png");
   background-size: cover;
   background-position: center;
-  filter: brightness(0.6);
+  /* filter: brightness(0.6); */
   position: relative;
   top: 0rem;
   left: 0;
   right: 0;
   bottom: 0rem;
   z-index: -1;
-  height: 100vh; 
   background-attachment: fixed;
+  
 }
 .userLogin{
   background-image: url('.././src/assets/africulture.webp');
@@ -64,3 +64,41 @@
   bottom: 0;
   
 }
+
+
+
+.afriContainer{
+  /* position: fixed; */
+  /* top: 0; */
+  /* bottom: 0; */
+  /* z-index: 8888; */
+  /* right: 0; */
+  /* width: 99%!important; */
+  /* height: 100%!important; */
+  animation-name: modal;
+  animation-duration: 2s;
+}
+
+@keyframes modal {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+
+@keyframes modal{
+  0%{
+      left:100% ;
+
+  }
+  100%{
+      left:0;
+
+  }
+  
+  
+}
+

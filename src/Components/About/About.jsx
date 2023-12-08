@@ -16,21 +16,14 @@ const About = () => {
                 <h1 style={{color: '#A16733'}} className='lg:text-4xl uppercase  text-lg font-semibold font-serif '>
                   About Us
                 </h1>
-              {/* </div> */}
-              {/* <Link className=''> */}
-                {/* <button style={{ backgroundColor: '#A16733' }} className=' font-normal font-serif    my-8 flex justify-center items-center py-3 xl:w-[18rem] w-[15rem] border hover:text-white transition text-white rounded-lg xl:text-3xl pt-2 md:text-5xl '>
-                  Register 
-                </button> */}
             </div>
             <div className='my-10 mx-[7rem] xl:w-[40rem] lg:w-[40rem] '>
-              <p   className='font-serif font-black text-lg '>
+              <p   className='mt-[0.5rem] text-xl font-serif '>
                 Africa root culture encompasses foundational elements of
                heritage, including core values, traditions, and practices with deep historical roots, contributing to the diverse cultures across the continent
               </p>
+              <button style={{backgroundColor: '#A16733' }}  className='h-14 w-48 bg-red-500 mt-5 rounded-full text-white uppercase font-semibold relative overflow-hidden transition duration-300 ease-in-out bg-gray-100 hover:bg-A16733 cursor-pointer'>Read more </button>
             </div>
-            {/* <div className='xl:my-[-2rem] my-[4rem] lg:my-[1rem] xl:w-[27rem] lg:w-[]  h-[7rem]'>
-              <img src="../../../src/assets/pnglogo.png" alt="" className='' />
-            </div> */}
 
           </div>
         </div>
@@ -39,7 +32,6 @@ const About = () => {
         <div className=' w-full pt-[4rem] '>
         <div className=' md:flex justify-evenly  md:h-[30rem]'>
           <div className=' md:w-[37rem] pl-6 md:h-[29rem]'>
-            {/* <div ></div> */}
             <h1 className='mt-[0.5rem] text-2xl font-serif uppercase'>Who we are</h1>
             <p className='font-light'>We are African </p>
             <p className='mt-[1.2rem] font-serif '>

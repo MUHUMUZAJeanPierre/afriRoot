@@ -9,6 +9,7 @@ import Grades from './Components/Grades/Grades';
 import Courses from './Components/Courses/Courses';
 import Login from './Components/Register/Login/Login';
 import SignUp from './Components/Register/SignUp/SignUp';
+import DetailCourse from './Components/DetailCourse';
 
 const Layout = () => {
   return (
@@ -33,6 +34,7 @@ const App = () => {
             <Route path='about' element={<About/>} />
             <Route path='history' element={<History/>} />
             <Route path='grades' element={<Grades/>} />
+            <Route path='detailCourse' element={<DetailCourse/>} />
 
           </Route>
           

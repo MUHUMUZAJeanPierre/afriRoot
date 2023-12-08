@@ -157,21 +157,26 @@ const Courses = () => {
 
 
 
-                <div className='flex justify-evenly flex-wrap content-center gap-10 mt-[0rem] lg:mt-[rem] h-[90rem] lg:h-[60rem] cursor-pointer'>
-                    { array.map((items,idx )=>{
-                        console.log(items)
-                        return(
-                            <>
-                            <div className='bg-white w-[13rem] h-[13rem] block px-auto shadow-lg rounded-md'>
-                            <img src={items.imgi} className='w-[8rem] h-[8rem] mx-auto my-3 pt-2' />
-                             <h1 className='italic font-semibold font-serif flex justify-center'>{items.name}</h1>
-                            <p className='italic font-serif flex justify-center pt-2'>{items.role}</p>
-                            </div>
-                            
-                            </>
-                        )
-                    })}
-
+                    <div className="flex justify-evenly content-center gap-10 flex-wrap mt-[4rem] ">
+                    {array.map((items, index) => (
+                    <Link
+                        to='/detailCourse'
+                        key={items.id}
+                        className="bg-white w-[13rem] h-[13rem] block px-auto shadow-xl rounded-md"
+                    >
+                        <img
+                        src={items.imgi}
+                        alt=""
+                        className="w-[8rem] h-[8rem] mx-auto my-3 pt-2"
+                        />
+                        <h2 className="italic font-semibold font-serif flex justify-center">
+                        {items.name}
+                        </h2>
+                        <p className="italic font-serif flex justify-center pt-2">
+                        {items.year}
+                        </p>
+                    </Link>
+                    ))}
                 </div>
                 
             </div>
