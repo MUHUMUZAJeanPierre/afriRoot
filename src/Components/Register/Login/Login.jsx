@@ -28,7 +28,7 @@ const Login = () => {
                         Forget Password
                         </Link>
                     </div>
-                    <input type="text" required="required" placeholder='Enter Your Password' className='h-12 lg:w-[28rem] border-2  border-black rounded-lg p-4 text-black'/>
+                    <input type="password" required="required" placeholder='Enter Your Password' className='h-12 lg:w-[28rem] border-2  border-black rounded-lg p-4 text-black'/>
                 </div>
                 <div className='mx-10 my-5'>
                     <button style={{background: '#CB8342'}} className='   text-white rounded-lg lg:h-14 lg:w-[28rem] w-[13.5rem] h-[3.5rem] text-2xl  font-semibold'>Log in</button>
