@@ -40,10 +40,10 @@
   background-attachment: fixed;
 }
 .bg-image-1 {
-  background-image: url(".././src/assets/pnglogo.png");
+  background-image: url(".././src/assets/exploring-africa-cultue.webp");
   background-size: cover;
   background-position: center;
-  /* filter: brightness(0.6); */
+  height: 28rem!important;
   position: relative;
   top: 0rem;
   left: 0;

@@ -57,32 +57,31 @@ const About = () => {
       </div>
 
       <div className=' h-full '>
-        
         <div className='md:flex xl:justify-evenly h-full w-full gap-2 px-5 pb-[10rem] xl:pr-20 xl:pl-20'>
-        <div className='shadow-slate-300 shadow-xl sm:w-[70rem] xl:h-[28rem] border-2 border-gray-100  rounded-lg  hover:border-2 hover:border-#CB8342 hover:rounded-lg mt-3'>
-          <div style={{ backgroundColor: '#CB8342' }} className=' w-20 h-20 rounded-full flex items-center justify-center mt-6  ml-auto mr-auto '>
+        <div className='shadow-slate-300 shadow-xl sm:w-[70rem] xl:h-[20rem] border-2 border-gray-100 rounded-lg  hover:border-2 hover:border-#CB8342 hover:rounded-lg mt-3'>
+          <div style={{ backgroundColor: '#CB8342' }}  className='  flex items-center justify-center w-20 h-20 rounded-full ml-auto mr-auto mt-6'>
             <MdOutlineWbSunny  className=' text-white text-5xl  ' />
           </div>
-          <h2 style={{color: '#CB8342'}}  className='-200 mt-5 flex justify-center font-semibold text-xl uppercase font-serif'>Mission</h2>
-          <p className=' mt-14 ml-2'>        
+          <h2 style={{color: '#CB8342'}} className=' mt-1 flex justify-center font-semibold text-xl uppercase font-serif'>Mission</h2>
+          <p className=' mt-10 ml-2'>        
               A single comprehensive program that covers various aspects of the culture, including history, traditions, language, arts, and social practices.
           </p>
         </div>
-        <div className='shadow-slate-300 shadow-xl sm:w-[70rem] xl:h-[28rem] border-2 border-gray-100 rounded-lg  hover:border-2 hover:border-#CB8342 hover:rounded-lg mt-3'>
-          <div style={{ backgroundColor: '#CB8342' }} className=' w-20 h-20 rounded-full flex items-center justify-center ml-auto mr-auto mt-6'>
+        <div className='shadow-slate-300 shadow-xl sm:w-[70rem] xl:h-[20rem] border-2 border-gray-100 rounded-lg  hover:border-2 hover:border-#CB8342 hover:rounded-lg mt-3'>
+          <div style={{ backgroundColor: '#CB8342' }}  className='  flex items-center justify-center w-20 h-20 rounded-full ml-auto mr-auto mt-6'>
             <TfiLightBulb className='text-white text-5xl' />
           </div>
-          <h2 style={{color: '#CB8342'}} className=' mt-5 flex justify-center font-semibold text-xl uppercase font-serif'>vision</h2>
-          <p className=' mt-14 ml-2'>
+          <h2 style={{color: '#CB8342'}} className=' mt-1 flex justify-center font-semibold text-xl uppercase font-serif'>vision</h2>
+          <p className=' mt-10 ml-2'>
             Programs that facilitate cultural exchange, either through travel or virtual means, providing participants with hands-on experiences and interactions with people from the culture
           .</p>
         </div>
-        <div className='shadow-slate-300 shadow-xl sm:w-[70rem] xl:h-[28rem] border-2 border-gray-100 rounded-lg  hover:border-2 hover:border-#CB8342 hover:rounded-lg mt-3'>
+        <div className='shadow-slate-300 shadow-xl sm:w-[70rem] xl:h-[20rem] border-2 border-gray-100 rounded-lg  hover:border-2 hover:border-#CB8342 hover:rounded-lg mt-3'>
           <div style={{ backgroundColor: '#CB8342' }}  className='  flex items-center justify-center w-20 h-20 rounded-full ml-auto mr-auto mt-6'>
             <AiOutlineHome className='text-white text-5xl'/>
           </div>
-          <h2  style={{color: '#CB8342'}} className=' mt-5 flex justify-center font-semibold text-xl uppercase font-serif '>Goal</h2>
-          <p className=' mt-14 ml-2'>
+          <h2  style={{color: '#CB8342'}} className=' mt-1 flex justify-center font-semibold text-xl uppercase font-serif '>Goal</h2>
+          <p className=' mt-10 ml-2'>
             Programs that apply cultural studies to real-world scenarios, such as business practices, diplomacy, or intercultural communication.
           </p>
         </div>
