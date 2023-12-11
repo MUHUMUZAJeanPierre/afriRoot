@@ -1,125 +1,95 @@
 import React, { useState } from "react";
+import { useParams } from "react-router-dom"; 
+import { dummyCourses, dummyModules, dummyQuizData } from "./Courses/Dummydata";
 
 const DetailCourse = () => {
+  const { courseId } = useParams(); 
+  console.log(courseId)
+  const course = dummyCourses.find((c) => c.id === parseInt(courseId, 10)); // Find the course by courseId
+  console.log(course,"course")
+  const modules = dummyModules.filter(
+    (module) => module.courseId === parseInt(courseId, 10)
+  ); // Filter modules by courseId
+  console.log(modules,'modules')
+  const Data = dummyQuizData.find(
+    (quiz) => quiz.courseId === parseInt(courseId, 10)
+  ); // Find quiz data by courseId
+
+  console.log(Data,'quiz')
+  const quizData = Data.questions.map((question) => ({
+    question: question.question,
+    options: question.options,
+    correctAnswer: question.correctAnswer,
+  }));
+  console.log(quizData,'')
+
   const [quizStarted, setQuizStarted] = useState(false);
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [userAnswers, setUserAnswers] =useState([]);
-  const [score,setScore] = useState(0);
+  const [userAnswers, setUserAnswers] = useState([]);
+  const [score, setScore] = useState(0);
   const [selectedOptions, setSelectedOptions] = useState([]);
   const [showResults, setShowResults] = useState(false);
-  // const [ submitted, setSubmitted] = useState(false);
 
+ const handleSubmit = () => {
+   setShowResults(true);
+ };
+   const handleOptionSelect = (option) => {
+     const newSelectedOptions = [...selectedOptions];
+     const optionIndex = newSelectedOptions.indexOf(option);
 
-  
-  const handleSubmit = ()=>{
-    setShowResults(true);
-  };
+     if (optionIndex === -1) {
+       newSelectedOptions.push(option);
+     } else {
+       newSelectedOptions.splice(optionIndex, 1);
+     }
 
-  // const showResults = submitted || currentQuestion === totalQuestions;
+     setSelectedOptions(newSelectedOptions);
+   };
 
-  const quizData = [
-    {
-      question: 'what is the capital city of France?',
-      options: ['Berlin', 'Paris', 'Kigali', 'Madrid', 'Rome'],
-      correctAnswer: 'Paris',
-    },
-    {
-      question: "Which planet is know as the Red Planet?",
-      options:['Earth', 'Mars', 'Jupter', 'Venus'],
-      correctAnswer: 'Mars',
-    },
-    {
-      question: "Which language is popular in East Africa?",
-      options: ['kinyarwanda', 'kinyankore', 'swahili', 'english'],
-      correctAnswer: 'kinyankore',
-    }
-    
-  ];
-  
-  const handleOptionSelect = (option)=>{
-    const newSelectedOptions = [...selectedOptions];
-    const optionIndex = newSelectedOptions.indexOf(option);
+   const goToNextQuestion = () => {
+     const selectedSet = new Set(selectedOptions);
+     const correctSet = new Set([quizData[currentQuestion].correctAnswer]); 
 
-    if(optionIndex === -1){
-      newSelectedOptions.push(option);
-    } else{
-      newSelectedOptions.splice(optionIndex, 1);
-    }
+     const isCorrect =
+       selectedSet.size === correctSet.size &&
+       [...selectedSet].every((option) => correctSet.has(option));
 
-    setSelectedOptions(newSelectedOptions);
-  };
+     setUserAnswers([
+       ...userAnswers,
+       { question: currentQuestion, selectedOptions, isCorrect },
+     ]);
 
-  const goToNextQuestion = () => {
-    const selectedSet = new Set(selectedOptions);
-    const correctSet = new Set([quizData[currentQuestion].correctAnswer]); // Wrap the correct answer in an array
-  
-    const isCorrect =
-      selectedSet.size === correctSet.size &&
-      [...selectedSet].every((option) => correctSet.has(option));
-  
-    setUserAnswers([
-      ...userAnswers,
-      { question: currentQuestion, selectedOptions, isCorrect },
-    ]);
-  
-    if (isCorrect) {
-      setScore(score + 1);
-    }
-  
-    setSelectedOptions([]);
-    setCurrentQuestion(currentQuestion + 1);
-  };
-  
+     if (isCorrect) {
+       setScore(score + 1);
+     }
 
-  
+     setSelectedOptions([]);
+     setCurrentQuestion(currentQuestion + 1);
+   };
 
-  const goToPreviousQuestion = ()=>{
-    setCurrentQuestion(currentQuestion -1);
-  };
-  
-  const restartQuiz = ()=>{
-    setQuizStarted(false);
-    setCurrentQuestion(0);
-    setUserAnswers([]);
-    setScore(0);
-    setSelectedOptions([]);
-  };
+   const goToPreviousQuestion = () => {
+     setCurrentQuestion(currentQuestion - 1);
+   };
 
-  const totalQuestions = quizData.length;
+   const restartQuiz = () => {
+    setShowResults(false);
+     setQuizStarted(false);
+     setCurrentQuestion(0);
+     setUserAnswers([]);
+     setScore(0);
+     setSelectedOptions([]);
+   };
+
+   const totalQuestions = quizData.length;
 
 
 
 
-
-
-  const modules = [
-    {
-      id: 1,
-      title: "Introduction to React",
-      description:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam, tempore nulla! Officia alias quibusdam quos at! Repudiandae natus sint ex, distinctio, necessitatibus harum rem, aperiam maiores fugit dicta temporibus officia.",
-    },
-    {
-      id: 2,
-      title: "State and Props",
-      description:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam, tempore nulla! Officia alias quibusdam quos at! Repudiandae natus sint ex, distinctio, necessitatibus harum rem, aperiam maiores fugit dicta temporibus officia.",
-    },
-    {
-      id: 3,
-      title: "Hooks and Lifecycle",
-      description:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam, tempore nulla! Officia alias quibusdam quos at! Repudiandae natus sint ex, distinctio, necessitatibus harum rem, aperiam maiores fugit dicta temporibus officia.",
-    },
-  ];
-
-  
 
   const [selectedModule, setSelectedModule] = useState(0);
   const handleModuleSelect = (moduleIndex) => {
     setSelectedModule(moduleIndex);
   };
-
 
   return (
     <div className="flex w-full h-full lg:h-[80rem] pt-[7rem] pl-14">
@@ -131,11 +101,14 @@ const DetailCourse = () => {
             <div
               key={module.id}
               className={`mb-4 cursor-pointer ${
-                selectedModule === index && "bg-gray-200"
+                index === selectedModule && "bg-gray-200"
               }`}
               onClick={() => handleModuleSelect(index)}
             >
               <h2 className="text-lg font-semibold">{module.title}</h2>
+              <p className="text-gray-500 mt-2 block">
+                Description: {module.description}
+              </p>
               <a href="#" className="text-blue-500 mt-2 block">
                 Access Module
               </a>
@@ -148,16 +121,16 @@ const DetailCourse = () => {
       <div className="flex-1 p-4">
         {/* Top Header */}
         <div className="mb-4 flex items-center">
-          {/* Learner's Avatar */}
+          {/* Course Image */}
           <img
-            src="learner-avatar.jpg"
-            alt="Avatar"
-            className="w-10 h-10 rounded-full mr-2"
+            src={course.imgi}
+            alt="Course"
+            className="w-16 h-16 rounded-full mr-2"
           />
-          {/* Learner's Name */}
+          {/* Course Name */}
           <div>
-            <h1 className="text-lg font-semibold">John Doe</h1>
-            <p className="text-gray-500">Score: </p>
+            <h1 className="text-lg font-semibold">{course.name}</h1>
+            <p className="text-gray-500">Year: {course.year}</p>
           </div>
         </div>
 
@@ -171,14 +144,16 @@ const DetailCourse = () => {
           <p className="text-gray-600 mb-4">
             {modules[selectedModule].description}
           </p>
+
+          {/* Quiz Section */}
+          {/* ... (existing code for quiz) */}
         </div>
       </div>
 
       {/* Right Sidebar */}
       <div className="w-1/4 border-l">
         {/* Quiz */}
-        <div className="quiz">
-      {!quizStarted ? (
+        <div className="quiz">   {!quizStarted ? (
         <button 
         onClick={() => setQuizStarted(true)}
         className="bg-blue-500 text-white py-2 px-4 rounded"
@@ -249,13 +224,15 @@ const DetailCourse = () => {
         </div>
       )}
     </div>
-    {/* display quiz results */}
-    {showResults && (
-      <div className="bg-green-200 p-4 rounded- mt-2">
-        <h2 className="text-xl font-bold mb-2">Quiz Results</h2>
-        <p>Your score: {score} out of {totalQuestions}</p>
-      </div>
-    )}
+        {/* Display quiz results */}
+        {showResults && (
+          <div className="bg-green-200 p-4 rounded- mt-2">
+            <h2 className="text-xl font-bold mb-2">Quiz Results</h2>
+            <p>
+              Your score: {score} out of {quizData.length}
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );
