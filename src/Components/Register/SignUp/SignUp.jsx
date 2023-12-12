@@ -5,6 +5,7 @@ import axios from 'axios';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { stringify } from 'postcss';
+import { Audio, ThreeDots } from 'react-loader-spinner';
 
 
 
@@ -18,7 +19,6 @@ const navigate = useNavigate();
 
 
 const handleSignUp = (e)=>{
-    console.log('start signing')
     e.preventDefault();
     setIsLoading(true);
     axios({
@@ -44,8 +44,9 @@ const handleSignUp = (e)=>{
 
     })
     .catch((error)=>{
-        console.log("error", error)
-        toast.error(error.message)
+        console.log("error", error);
+        toast.error(error.message);
+        setIsLoading(false);
 
     })
 }
@@ -64,7 +65,7 @@ const handleSignUp = (e)=>{
                     onChange={(e)=>{setName(e.target.value)}}
                     type="text" 
                     required='required'   
-                    placeholder='Enter your email' 
+                    placeholder='Enter your first Name' 
                     className='lg:w-[28rem] h-12 border-2  border-black rounded-lg p-4 text-black '/><br/><br/>
                     <label htmlFor="" className='font-semibold '>
                         Phone
@@ -100,7 +101,19 @@ const handleSignUp = (e)=>{
                     onClick={handleSignUp}
                     style={{background: '#CB8342'}} 
                     className='  text-white rounded-xl lg:h-14 lg:w-[28rem] w-[13.5rem] h-[3rem] text-2xl  font-semibold'>
-                        Sign Up
+                        {isLoading ? (
+                                        <ThreeDots
+                                        height="60"
+                                        width="60"
+                                        radius="9"
+                                        color="white"
+                                        ariaLabel="three-dots-loading"
+                                        wrapperStyle
+                                        wrapperClass="flex justify-center"
+                                        />
+                                        ) : (
+                                            "Sign Up "
+                                        )}
                     </button>
                 </div>
                 <div className=' mt-9'>

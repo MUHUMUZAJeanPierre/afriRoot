@@ -10,19 +10,18 @@ const About = () => {
   return (
     <div>
           <div className=' bg-image-about  bg-cover bg-center'>
-          <div className='py-[15rem] '>
+          <div className=' py-44'>
             <div className=' my-10 mx-[7rem] xl:w-[40rem] lg:w-[40rem] ' >
-              {/* <div> */}
-                <h1 style={{color: '#A16733'}} className='lg:text-4xl uppercase  text-lg font-semibold font-serif '>
+                <h1 style={{color: '#A16733'}} className='text-white lg:text-4xl uppercase  text-lg font-semibold font-serif '>
                   About Us
                 </h1>
             </div>
-            <div className='my-10 mx-[7rem] xl:w-[40rem] lg:w-[40rem] '>
-              <p   className='mt-[0.5rem] text-xl font-serif '>
+            <div className=' font-light my-10 mx-[7rem] xl:w-[40rem] lg:w-[40rem] '>
+              <p   className='mt-[0.5rem] text-xl text-white'>
                 Africa root culture encompasses foundational elements of
                heritage, including core values, traditions, and practices with deep historical roots, contributing to the diverse cultures across the continent
               </p>
-              <button style={{backgroundColor: '#A16733' }}  className='h-14 w-48 bg-red-500 mt-5 rounded-full text-white uppercase font-semibold relative overflow-hidden transition duration-300 ease-in-out bg-gray-100 hover:bg-A16733 cursor-pointer'>Read more </button>
+              <button style={{backgroundColor: '#A16733' }}  className='h-14 w-48 mt-5 rounded-full text-white uppercase font-semibold relative overflow-hidden transition duration-300 ease-in-out bg-gray-100 hover:bg-A16733 cursor-pointer'>Read more </button>
             </div>
 
           </div>
@@ -34,7 +33,7 @@ const About = () => {
           <div className=' md:w-[37rem] pl-6 md:h-[29rem]'>
             <h1 className='mt-[0.5rem] text-2xl font-serif uppercase'>Who we are</h1>
             <p className='font-light'>We are African </p>
-            <p className='mt-[1.2rem] font-serif '>
+            <p className='mt-[1.2rem] font-light'>
             Africa root culture could potentially refer to the foundational or fundamental
             aspects of African culture. The term <b>root</b> often conveys the idea of something essential,
             fundamental, or originating. In the context of African culture, it might imply the core values,
@@ -57,13 +56,13 @@ const About = () => {
       </div>
 
       <div className=' h-full '>
-        <div className='md:flex xl:justify-evenly h-full w-full gap-2 px-5 pb-[10rem] xl:pr-20 xl:pl-20'>
+        <div className=' font-light md:flex xl:justify-evenly h-full w-full gap-2 px-5 pb-[10rem] xl:pr-20 xl:pl-20'>
         <div className='shadow-slate-300 shadow-xl sm:w-[70rem] xl:h-[20rem] border-2 border-gray-100 rounded-lg  hover:border-2 hover:border-#CB8342 hover:rounded-lg mt-3'>
           <div style={{ backgroundColor: '#CB8342' }}  className='  flex items-center justify-center w-20 h-20 rounded-full ml-auto mr-auto mt-6'>
             <MdOutlineWbSunny  className=' text-white text-5xl  ' />
           </div>
           <h2 style={{color: '#CB8342'}} className=' mt-1 flex justify-center font-semibold text-xl uppercase font-serif'>Mission</h2>
-          <p className=' mt-10 ml-2'>        
+          <p className=' mt-10 ml-2 '>        
               A single comprehensive program that covers various aspects of the culture, including history, traditions, language, arts, and social practices.
           </p>
         </div>
