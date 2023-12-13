@@ -33,8 +33,10 @@ const App = () => {
             <Route path="history" element={<History />} />
             <Route path="courses/:courseId/*" element={<DetailCourse />} />
           </Route>
-          <Route path="login" element={<Login />} />
-          <Route path="signUp" element={<SignUp />} />
+
+            <Route path="login" element={<Login />} />
+            <Route path="signUp" element={<SignUp />} />
+
         </Routes>
       </BrowserRouter>
     </div>

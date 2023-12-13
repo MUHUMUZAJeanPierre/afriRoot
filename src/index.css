@@ -21,7 +21,6 @@
   left: 0;
   right: 0;
   bottom: 0rem;
-  z-index: -1;
   height: 100vh;
   background-attachment: fixed;
 }
