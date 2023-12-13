@@ -54,11 +54,11 @@ export const LoginUser = (data, navigate) => async (dispatch) => {
     );
   console.log(response)
    
-  // dispatch(login(response.data.user_data));
-    // console.log(response.data, 'this is data')
-    // localStorage.setItem("logindata", JSON.stringify(response.data));
-
-    localStorage.setItem("token", response.token);
+     dispatch(login(response.data.userdata));
+    console.log(response.data.userdata, 'userdata')
+    console.log(response.data.token,'token')
+    localStorage.setItem("logindata", JSON.stringify(response.data.userdata));
+    localStorage.setItem("token", response.data.token);
 
     dispatch(tokenStore(response.token));
     dispatch(endLoading());

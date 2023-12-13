@@ -105,10 +105,10 @@ const DetailCourse = () => {
               }`}
               onClick={() => handleModuleSelect(index)}
             >
-              <h2 className="text-lg font-semibold">{module.title}</h2>
-              <p className="text-gray-500 mt-2 block">
+              <h2 className="text-lg font-semibold font-sans" >{module.title}</h2>
+              {/* <p className="text-gray-500 mt-2 block">
                 Description: {module.description}
-              </p>
+              </p> */}
               <a href="#" className="text-blue-500 mt-2 block">
                 Access Module
               </a>
@@ -151,79 +151,81 @@ const DetailCourse = () => {
       </div>
 
       {/* Right Sidebar */}
-      <div className="w-1/4 border-l">
+      <div className="w-1/4 border-l pl-5" >
         {/* Quiz */}
-        <div className="quiz">   {!quizStarted ? (
-        <button 
-        onClick={() => setQuizStarted(true)}
-        className="bg-blue-500 text-white py-2 px-4 rounded"
-        >Start Quiz</button>
-      ) : currentQuestion < totalQuestions ? (
-        <div>
-          <h1 
-            className="text-xl  mb-4"> 
-            {quizData[currentQuestion].question}
-          </h1>
-          <ul className=" pl-4 mb-4">
-            {quizData[currentQuestion].options.map((option, index) => (
-              <li key={index} className="mb-2">
-                <label className="flex items-center">
-                  <input
-                    type="checkbox"
-                    value={option}
-                    onChange={() => handleOptionSelect(option)}
-                    checked={selectedOptions.indexOf(option) !== -1}
-                    className="mr-2"
-                  />
-                  {option}
-                </label>
-              </li>
-            ))}
-          </ul>
-          <button 
-            className="bg-gray-500 text-white py-2 px-4 rounded mr-2"
-            onClick={goToPreviousQuestion} 
-            disabled={currentQuestion === 0}>
-            Previous
-          </button>
-          <button 
-          className="bg-blue-500 text-white py-2 px-4 rounded"
-          onClick={goToNextQuestion} >
-            Next
-          </button>
-        </div>
-      ) : (
-        <div className="quiz-completed">
-          <h1 className="text-2xl font-bold mb-4">Quiz Completed!</h1>
-          {showResults && (
-            <>
-            <p
-          className="mb-4"
-          >
-            Your Score: {score} out of {totalQuestions}
-          </p>
-          <button 
-            onClick={restartQuiz}
-            className="bg-blue-500 text-white py-2 px-4 rounded mb-4"
-            style={{backgroundC: '#CB8342'}}
-          >Restart Quiz
-          </button>
-            </>
+        <div className="quiz">
+          {" "}
+          {!quizStarted ? (
+            <button
+              onClick={() => setQuizStarted(true)}
+              className="bg-blue-500 text-white py-2 px-4 rounded"
+            >
+              Start Quiz
+            </button>
+          ) : currentQuestion < totalQuestions ? (
+            <div>
+              <h4 className="text-x  mb-4 font-bold">
+                {quizData[currentQuestion].question}
+              </h4>
+              <ul className=" pl-4 mb-4">
+                {quizData[currentQuestion].options.map((option, index) => (
+                  <li key={index} className="mb-2">
+                    <label className="flex items-center">
+                      <input
+                        type="radio"
+                        value={option}
+                        onChange={() => handleOptionSelect(option)}
+                        checked={selectedOptions.indexOf(option) !== -1}
+                        className="mr-2"
+                      />
+                      {option}
+                    </label>
+                  </li>
+                ))}
+              </ul>
+              <button
+                className="bg-gray-500 text-white py-2 px-4 rounded mr-2"
+                onClick={goToPreviousQuestion}
+                disabled={currentQuestion === 0}
+              >
+                Previous
+              </button>
+              <button
+                className="bg-blue-500 text-white py-2 px-4 rounded"
+                onClick={goToNextQuestion}
+              >
+                Next
+              </button>
+            </div>
+          ) : (
+            <div className="quiz-completed">
+              <h1 className="text-2xl font-bold mb-4">Quiz Completed!</h1>
+              {showResults && (
+                <>
+                  <p className="mb-4">
+                    Your Score: {score} out of {totalQuestions}
+                  </p>
+                  <button
+                    onClick={restartQuiz}
+                    className="bg-blue-500 text-white py-2 px-4 rounded mb-4"
+                    style={{ backgroundC: "#CB8342" }}
+                  >
+                    Restart Quiz
+                  </button>
+                </>
+              )}
+              {!showResults && (
+                <button
+                  onClick={handleSubmit}
+                  className="bg-green-500 text-white py-2 px-4 rounded"
+                  style={{ backgroundColor: "#CB8342" }}
+                >
+                  Submit
+                </button>
+              )}
+            </div>
           )}
-          {!showResults && (
-            <button 
-            onClick={handleSubmit}
-            className="bg-green-500 text-white py-2 px-4 rounded"
-            style={{backgroundColor: '#CB8342'}}
-          >
-            Submit
-          </button>
-          )}
-          
-          
         </div>
-      )}
-    </div>
         {/* Display quiz results */}
         {showResults && (
           <div className="bg-green-200 p-4 rounded- mt-2">
