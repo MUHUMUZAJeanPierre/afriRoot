@@ -19,26 +19,21 @@ const Modal = () => {
             </a>
           </Link>
 
-           <Link to="programs"> 
+           <Link to="/DetailCourses"> 
           <a href="" className="hover:underline">
             Courses
           </a>
            </Link> 
 
-           <Link to="fabClass"> 
-          <a href="" className="hover:underline">
+           <Link to=""> 
+          <a href="/history" className="hover:underline">
             Today's history
           </a>
            </Link> 
 
-           <Link to="ourServices"> 
-          <a href="" className="hover:underline">
-            Grades
-          </a>
-           </Link>
-          <Link to="/dashboard">
+          <Link to="/login">
             <a href="" className="hover:underline">
-              Dashboard
+              Login
             </a>
           </Link>
         </div>

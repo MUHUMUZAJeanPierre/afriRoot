@@ -27,7 +27,7 @@ useEffect(()=>{
 const navbarClass = scrolling ? "bg-whiteScroll " : "bg-whiteScroll ";
   return (
     <>
-      <div className={` afriContainer fixed md:px-14 flex w-full font-serif  p-4 lg:px-20 justify-between items-center z-40 ${navbarClass}`}>
+      <div className={`  afriContainer  md:px-14 flex w-full font-serif  p-4 lg:px-20 justify-between items-center z-40 ${navbarClass}`}>
         <div style={{color: '#CB8342'}} className=" font-normal   text-xl italic">
           <p>AFRI ROOT</p>
         </div>
@@ -52,11 +52,6 @@ const navbarClass = scrolling ? "bg-whiteScroll " : "bg-whiteScroll ";
             </a>
            </Link> 
 
-           <Link to="/grades"> 
-            <a href="" className="hover:underline px-2">
-              Grades
-            </a>
-           </Link> 
 
            <Link to="/about"> 
               <a href="" className="hover:underline px-2">
