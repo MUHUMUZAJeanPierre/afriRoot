@@ -68,4 +68,4 @@ const dummyQuizData = [
   },
 ];
 
-export { dummyCourses, dummyModules, dummyQuizData };
+export { dummyCourses, dummyModules, dummyQuizData};

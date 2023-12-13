@@ -6,44 +6,43 @@ import { FaLinkedin } from "react-icons/fa6";
 import axios from 'axios';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { LoginUser } from '../../../features/authslice';
+import { useDispatch } from "react-redux";
+
 
 
 const Login = () => {
     const [password,setPassword] = useState('');
     const [email, setEmail] = useState('');
     const [isLoading, setIsLoading] = useState(false);
-    const navigate = useNavigate(false)
-   
-    const handleLogin = ()=>{
-        // e.preventDelfault();
-        axios({
-            method:"post",
-            url:"https://afriroot.onrender.com/auth/login/",
-            data:{
-                email: email,
-                password:password,
-            },
-            headers: {
-                "Content-Type": "application/json",
-            },
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
+    
+ const handleLoginn = () => {
+   if (email && password) {
+     const data = {
+       email: email,
+       password: password,
+     };
 
-        }).then((response)=>{
-            console.log("response ", response);
-            localStorage.setItem("token", response.data.access_token);
-            localStorage.setItem("user",JSON.stringify(response.data.user));
-            toast.success(response.data.message)
-            // const token = localStorage.getItem("token");
-            // console.log(token)
-            setTimeout(()=>{
-                navigate("/DetailCourse");
-            }, 2000)
-            setIsLoading(false);
-        }).catch((error)=>{
-            console.log(error);
-            toast.error(error.message);
-            setIsLoading(true);
-        })
-    }
+     dispatch(LoginUser(data, navigate));
+   } else {
+     Warn();
+   }
+ };
+      const Warn = () =>
+        toast.warning("Fill Everything", {
+          position: "top-right",
+          autoClose: 1000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+   
+   
   return (
     <>
     <ToastContainer/>
@@ -81,7 +80,7 @@ const Login = () => {
                 </div>
                 <div className='mx-10 my-5'>
                     <button 
-                        onClick={handleLogin}
+                        onClick={handleLoginn}
                         style={{background: '#CB8342'}} 
                         className='text-white rounded-lg lg:h-14 lg:w-[28rem] w-[13.5rem] h-[3.5rem] text-2xl  font-semibold'>
                         Log in
