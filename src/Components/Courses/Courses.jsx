@@ -21,19 +21,20 @@ const Courses = () => {
           <div className="flex justify-evenly content-center gap-10 flex-wrap mt-[4rem] ">
             {dummyCourses.map((course) => (
               <Link
-                to={`/courses/${course.id}`}
+                to={`/courses/${course.id}`} 
                 key={course.id}
-                className="bg-white w-[13rem] h-[13rem] block px-auto shadow-xl rounded-md"
+                className=" bg-white w-[22rem] h-[23rem] block px-auto shadow-xl rounded-md border-2  ease-in-out duration-300 hover:scale-105 transition-all"
               >
                 <img
                   src={course.imgi}
                   alt=""
-                  className="w-[8rem] h-[8rem] mx-auto my-3 pt-2"
+                  className="w-[21rem] h-[15rem] m-1 pl-1 rounded-lg "
                 />
-                <h2 className="italic font-semibold font-serif flex justify-center">
+                <h2 style={{ color: '#CB8342' }} className='m-2 flex justify-start bg-white  font-bold '> AFRI ROOT</h2>
+                <h2 className="m-2 font-light">
                   {course.name}
                 </h2>
-                <p className="italic font-serif flex justify-center pt-2">
+                <p className="m-2 flex justify-start font-light ">
                   {course.year}
                 </p>
               </Link>
