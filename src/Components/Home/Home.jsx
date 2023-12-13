@@ -12,15 +12,17 @@ const Home = () => {
     <div >
 
       {/* Home image  */}
-        <div className=' bg-image   bg-cover bg-center -z-10'>
+        <div className=' bg-image   bg-cover bg-center '>
           <div className='flex justify-evenly py-44'>
             <div className=' my-[6rem] lg:10 mx-3 xl:w-[35rem] lg:w-[20rem]  h-[9rem] ' >
                 <h1 className='lg:text-4xl text-lg text-white'>This's <span style={{color: '#A16733'}} className='italic light font-serif uppercase'>Afri culture</span> heritage site. </h1>
                 <h1  className='lg:text-xl mt-10 font-serif text-white'>
                   Every man's ability may be strengthened or increased by culture.
                 </h1>
-                <Link to='/detailCourse'>
-                <button style={{backgroundColor: '#A16733' }}  className='h-14 w-48 mt-5 rounded-full text-white uppercase font-semibold relative overflow-hidden transition duration-300 ease-in-out bg-gray-100 hover:bg-A16733 cursor-pointer'>Learn more </button> 
+                <Link onClick={()=>{console.log('fffffffffff')}} to='/signUp'>
+                <button style={{backgroundColor: '#A16733' }}  className='h-14 w-48 mt-5 rounded-full text-white 
+                  uppercase font-semibold  overflow-hidden position transition duration-300 ease-in-out bg-gray-100 
+                   hover:bg-A16733 cursor-pointer'>register </button> 
                 </Link>
             </div>
             <div className='xl:my-[-2rem]   my-[4rem] lg:my-[1rem] lg:w-[18rem] xl:w-[32rem]  lg:h-[5rem]'>
@@ -65,7 +67,6 @@ const Home = () => {
           <h2  style={{color: '#CB8342'}} className="text-center  font-semibold text-xl uppercase font-serif">
             Our Objectives
           </h2>
-          {/* <p className="text-center text-[#3A3A3A]">Trending culture </p> */}
         </div>
         <div className=' font-light md:flex xl:justify-evenly h-full w-full gap-2 px-5 pb-[10rem] xl:pr-20 xl:pl-20'>
         <div  className=' bg-[#F8FAFA]  shadow-slate  shadow-xl sm:w-[70rem] xl:h-[20rem] border-2 border-gray-100 rounded-lg  hover:border-2 hover:border-#CB8342 hover:rounded-lg mt-3'>

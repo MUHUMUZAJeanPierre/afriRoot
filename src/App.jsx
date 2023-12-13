@@ -35,8 +35,10 @@ const App = () => {
             <Route path="courses/:courseId/*" element={<DetailCourse />} />
             <Route path="profile" element = {<StudentProfile/>}/>
           </Route>
-          <Route path="login" element={<Login />} />
-          <Route path="signUp" element={<SignUp />} />
+
+            <Route path="login" element={<Login />} />
+            <Route path="signUp" element={<SignUp />} />
+
         </Routes>
       </BrowserRouter>
     </div>
