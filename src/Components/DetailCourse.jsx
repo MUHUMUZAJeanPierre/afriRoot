@@ -130,7 +130,7 @@ const DetailCourse = () => {
           {/* Course Name */}
           <div>
             <h1 className="text-lg font-semibold">{course.name}</h1>
-            <p className="text-gray-500">Year: {course.year}</p>
+            <p className="text-gray-500">Region: {course.year}</p>
           </div>
         </div>
 

@@ -40,16 +40,18 @@ const authSlice = createSlice({
   },
 });
 
-export const { login, tokenStore, startLoading, endLoading, Errorr } =
+export const { login, tokenStore, startLoading, endLoading, Errorr, logout } =
   authSlice.actions;
 
 export default authSlice.reducer;
 
 export const LoginUser = (data, navigate) => async (dispatch) => {
+
   try {
+    console.log("start login")
     dispatch(startLoading());
     const response = await axios.post(
-      "https://afriroot.onrender.com/auth/login/",
+      "https://afriroot.onrender.com/auth/login",
       data
     );
   console.log(response)
@@ -59,7 +61,6 @@ export const LoginUser = (data, navigate) => async (dispatch) => {
     console.log(response.data.token,'token')
     localStorage.setItem("logindata", JSON.stringify(response.data.userdata));
     localStorage.setItem("token", response.data.token);
-
     dispatch(tokenStore(response.token));
     dispatch(endLoading());
 
@@ -82,9 +83,11 @@ export const LoginUser = (data, navigate) => async (dispatch) => {
 };
 
 
-export const LogoutUser = (history) => (dispatch) => {
+export const LogoutUser = (navigate) => (dispatch) => {
   localStorage.removeItem("logindata");
   localStorage.removeItem("token");
   dispatch(logout(""));
-  history.push("/");
+  navigate("/");
+  window.location.reload();
 };
+
