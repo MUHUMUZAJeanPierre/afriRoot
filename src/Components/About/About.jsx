@@ -37,7 +37,7 @@ const About = () => {
 {/* OUR HISTORY AND WHAT WE ARE  */}
         <div className=' w-full pt-[4rem] '>
         <div className=' md:flex justify-evenly  md:h-[30rem]'>
-          <div className=' md:w-[37rem] pl-6 md:h-[29rem]'>
+          <div className=' md:w-[37rem] pl-6 md:h-[29rem] '>
             <h1 className='mt-[0.5rem] text-2xl font-serif uppercase'>Who we are</h1>
             <p className='font-light'>We are African </p>
             <p className='mt-[1.2rem] font-light'>

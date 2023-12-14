@@ -25,7 +25,7 @@ const Modal = () => {
           </a>
            </Link> 
 
-           <Link to=""> 
+           <Link to="/history"> 
           <a href="/history" className="hover:underline">
             Today's history
           </a>

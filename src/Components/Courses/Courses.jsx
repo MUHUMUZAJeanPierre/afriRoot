@@ -27,14 +27,14 @@ const Courses = () => {
             type="text"
             value={searchTerm}
             onChange={handleSearch}
-            className="h-[2.5rem] pl-4 pr-[10rem] rounded-3xl border-2 border-white-600 focus:border-white-600 outline-none"
+            className="h-[3.5rem] pl-4 pr-[10rem] rounded-3xl border-2 border-white-600 focus:border-white-600 outline-none"
           />
           <div>
 
           <IoMdSearch
           size={10}
           style={{ backgroundColor: "#A16733" }}
-          className="text-white w-10 h-[2.5rem] mr-[6rem] bg-white ml-[-2rem] rounded-r-3xl  "
+          className="text-white w-16 h-[3.5rem] lg:mr-[8rem] bg-white ml-[-2rem] rounded-r-3xl  "
           />
           </div>
         </div>
@@ -44,7 +44,7 @@ const Courses = () => {
               to={`/courses/${course.id}`}
               key={course.id}
               className=" bg-white w-[22rem] h-[23rem] block px-4 py-2 shadow-xl rounded-md border-2  ease-in-out duration-300 hover:scale-105 transition-all"
-              >
+            >
 
               <img
                 src={course.imgi}
