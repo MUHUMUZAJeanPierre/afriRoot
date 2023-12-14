@@ -11,7 +11,7 @@ const About = () => {
   return (
     <div>
           <div className=' bg-image-about  bg-cover bg-center'>
-          <div className=' py-44'>
+          <div className=' py-[6rem]'>
             <div className=' my-10 mx-[7rem] xl:w-[40rem] lg:w-[40rem] ' >
                 <h1 style={{color: '#A16733'}} className='text-white lg:text-4xl uppercase  text-lg font-semibold font-serif '>
                   About Us

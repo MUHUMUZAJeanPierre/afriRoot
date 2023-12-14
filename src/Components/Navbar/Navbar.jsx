@@ -34,7 +34,7 @@ const navbarClass = scrolling ? "bg-whiteScroll " : "bg-whiteScroll ";
   return (
     <>
       <div
-        className={`  afriContainer  md:px-14 flex w-full font-serif  p-4 lg:px-20 justify-between items-center z-40 ${navbarClass}`}
+        className={`afriContainer  md:px-14 flex w-full font-serif  p-4 lg:px-20 justify-between items-center  ${navbarClass}`}
       >
         <div
           style={{ color: "#CB8342" }}
