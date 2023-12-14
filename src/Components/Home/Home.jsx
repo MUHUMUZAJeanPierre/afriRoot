@@ -15,11 +15,12 @@ const Home = () => {
         <div className=' bg-image   bg-cover bg-center '>
           <div className='flex justify-evenly py-44'>
             <div className=' my-[6rem] lg:10 mx-3 xl:w-[35rem] lg:w-[20rem]  h-[9rem] ' >
-                <h1 className='lg:text-4xl text-lg text-white'>This's <span style={{color: '#A16733'}} className='italic light font-serif uppercase'>Afri culture</span> heritage site. </h1>
+                <h1 className='lg:text-4xl text-lg text-white'>This's <span style={{color: '#A16733'}} className='italic  
+                  light font-serif uppercase'>Afri culture</span> heritage site. </h1>
                 <h1  className='lg:text-xl mt-10 font-serif text-white'>
                   Every man's ability may be strengthened or increased by culture.
                 </h1>
-                <Link onClick={()=>{console.log('fffffffffff')}} to='/signUp'>
+                <Link to='/signUp'>
                 <button style={{backgroundColor: '#A16733' }}  className='h-14 w-48 mt-5 rounded-full text-white 
                   uppercase font-semibold  overflow-hidden position transition duration-300 ease-in-out bg-gray-100 
                    hover:bg-A16733 cursor-pointer'>register </button> 
@@ -42,12 +43,15 @@ const Home = () => {
             Africa root culture could potentially refer to the foundational or fundamental
             aspects of African culture. The term <b>root</b> often conveys the idea of something essential,
             fundamental, or originating. In the context of African culture, it might imply the core values,
-            traditions, and practices that have deep historical roots and form the basis of the diverse cultures found across the continent.
-            African culture is incredibly diverse, with each region, ethnic group, and community having its unique traditions, languages, art forms, and 
-            If there is a specific context or source where <b>Africa root culture</b> is discussed, it would be beneficial to refer to that context for a more precise understanding.
+            traditions, and practices that have deep historical roots and form the basis of the diverse cultures found 
+             across the continent.
+            African culture is incredibly diverse, with each region, ethnic group, and community having its unique 
+             traditions, languages, art forms, and 
+            If there is a specific context or source where <b>Africa root culture</b> is discussed, it would be 
+             beneficial to refer to that context for a more precise understanding.
             </p>
           </div>
-          <div className=' md:h-[23rem] xl:w-[32rem] md:w-[30rem] sm:w-[10rem] sm:h-[40rem] block justify-end px-4 py-2 '>
+          <div className=' md:h-[23rem] xl:w-[32rem] md:w-[30rem] sm:w-[10rem] sm:h-[40rem] block justify-end px-4 py-2'>
             <span className='flex justify-end '>
             <img src="../../../src/assets/10001.jpg" alt="" className='bg-[#F3F5F5] mt-2 md:w-[29rem]'/>
             </span>
@@ -69,7 +73,7 @@ const Home = () => {
           </h2>
         </div>
         <div className=' font-light md:flex xl:justify-evenly h-full w-full gap-2 px-5 pb-[10rem] xl:pr-20 xl:pl-20'>
-        <div  className=' bg-[#F8FAFA]  shadow-slate  shadow-xl sm:w-[70rem] xl:h-[20rem] border-2 border-gray-100 rounded-lg  hover:border-2 hover:border-#CB8342 hover:rounded-lg mt-3'>
+        <div  className=' bg-[#F8FAFA]   shadow-slate  shadow-xl sm:w-[70rem] xl:h-[20rem] border-2 border-gray-100 rounded-lg  hover:border-2 hover:border-#CB8342 hover:rounded-lg mt-3'>
           <div  style={{ backgroundColor: '#CB8342' }} className=' flex items-center justify-center w-20 h-20 rounded-full ml-auto mr-auto mt-6'>
             <MdOutlineWbSunny  className=' text-white text-5xl  ' />
           </div>
