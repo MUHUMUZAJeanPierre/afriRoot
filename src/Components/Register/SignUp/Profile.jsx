@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
+import { dummyCourses } from "../../Courses/Dummydata";
+
 
 const HistoryProfile = () => {
-
   const userData = {
-    
     bio: "Lorem ipsum dolorve  sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   };
  const token = localStorage.getItem("token");
@@ -14,6 +14,28 @@ const HistoryProfile = () => {
   const [name, setThename] = useState(loginData ? loginData.name : "");
   const [phone, setPhone] = useState(loginData ? loginData.phone : "");
   const [email, setEmail] = useState(loginData ? loginData.email : "");
+  const [performance ,setPerformace ]= useState(null);
+  const [loading, setLoading] = useState(true);
+  
+  const userId = loginData ? loginData.id : null;
+
+  useEffect(()=>{
+    const userCourses = dummyCourses.filter(course =>course.userId ===userId);
+    if(userCourses.length > 0){
+      const totalGrades = userCourses.reduce((sum, course) => sum + course.grade, 0);
+      const averageGrade = totalGrades / userCourses.length;
+
+      setPerformace(averageGrade);
+    } else {
+      setPerformace(null);
+    }
+
+    setLoading(false)
+  }, [userId]);
+
+  if(loading) {
+    return <p>Loading ...</p>
+  }
 
   return (
     <div className="bg-gray-100 h-[48rem] flex items-center justify-center">
@@ -36,14 +58,14 @@ const HistoryProfile = () => {
           <strong>Level:</strong> Beginner
         </div>
         <div className="mb-4">
-          <strong>Grades:</strong> 67
+          <strong>Grades:</strong> {dummyCourses.grade}
         </div>
         <div className="mb-6">
           <strong>Bio:</strong>
           <p className="text-gray-700">{userData.bio}</p>
         </div>
         <div className="flex justify-end">
-          <button className="bg-orange-500 text-white px-4 py-2 rounded-md">
+          <button style={{ backgroundColor: "#CB8342" }} className=" text-white px-4 py-2 rounded-md">
             Logout
           </button>
         </div>

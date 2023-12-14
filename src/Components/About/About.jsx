@@ -2,6 +2,7 @@ import React from 'react'
 import {MdOutlineWbSunny} from 'react-icons/md';
 import {TfiLightBulb} from 'react-icons/tfi';
 import {AiOutlineHome} from 'react-icons/ai';
+import {Link} from 'react-router-dom';
 
 
 
@@ -10,18 +11,24 @@ const About = () => {
   return (
     <div>
           <div className=' bg-image-about  bg-cover bg-center'>
-          <div className=' py-44'>
+          <div className=' py-[6rem] lg:py-44'>
             <div className=' my-10 mx-[7rem] xl:w-[40rem] lg:w-[40rem] ' >
                 <h1 style={{color: '#A16733'}} className='text-white lg:text-4xl uppercase  text-lg font-semibold font-serif '>
                   About Us
                 </h1>
             </div>
             <div className=' font-light my-10 mx-[7rem] xl:w-[40rem] lg:w-[40rem] '>
-              <p   className='mt-[0.5rem] text-xl text-white'>
+              <p   className='mt-[0.5rem] text-xl text-white font-bold'>
                 Africa root culture encompasses foundational elements of
                heritage, including core values, traditions, and practices with deep historical roots, contributing to the diverse cultures across the continent
               </p>
-              <button style={{backgroundColor: '#A16733' }}  className='h-14 w-48 mt-5 rounded-full text-white uppercase font-semibold relative overflow-hidden transition duration-300 ease-in-out bg-gray-100 hover:bg-A16733 cursor-pointer'>Read more </button>
+              <Link to='/'>
+              <button 
+                style={{backgroundColor: '#A16733' }}  
+                className='h-14 w-48 mt-5 rounded-full text-white uppercase font-semibold relative overflow-hidden transition duration-300 ease-in-out bg-gray-100 hover:bg-A16733 cursor-pointer'>
+                Read more 
+              </button>
+              </Link>
             </div>
 
           </div>
