@@ -1,28 +1,40 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { dummyCourses } from "../../Courses/Dummydata";
-
+import { useNavigate } from "react-router-dom";
+import { LogoutUser } from "../../../features/authslice";
+import { useDispatch } from "react-redux";
 
 const HistoryProfile = () => {
   const userData = {
     bio: "Lorem ipsum dolorve  sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   };
- const token = localStorage.getItem("token");
- const loginData = JSON.parse(localStorage.getItem("logindata"));
- console.log(token);
- console.log(loginData);
+  const token = localStorage.getItem("token");
+  const loginData = JSON.parse(localStorage.getItem("logindata"));
+  console.log(token);
+  console.log(loginData);
   const [name, setThename] = useState(loginData ? loginData.name : "");
   const [phone, setPhone] = useState(loginData ? loginData.phone : "");
   const [email, setEmail] = useState(loginData ? loginData.email : "");
-  const [performance ,setPerformace ]= useState(null);
+  const [performance, setPerformace] = useState(null);
   const [loading, setLoading] = useState(true);
-  
-  const userId = loginData ? loginData.id : null;
 
-  useEffect(()=>{
-    const userCourses = dummyCourses.filter(course =>course.userId ===userId);
-    if(userCourses.length > 0){
-      const totalGrades = userCourses.reduce((sum, course) => sum + course.grade, 0);
+  const userId = loginData ? loginData.id : null;
+  const navigate = useNavigate();
+  const dispatch = useDispatch()
+  const handleLogout = () => {
+    dispatch(LogoutUser(navigate));
+  };
+
+  useEffect(() => {
+    const userCourses = dummyCourses.filter(
+      (course) => course.userId === userId
+    );
+    if (userCourses.length > 0) {
+      const totalGrades = userCourses.reduce(
+        (sum, course) => sum + course.grade,
+        0
+      );
       const averageGrade = totalGrades / userCourses.length;
 
       setPerformace(averageGrade);
@@ -30,11 +42,11 @@ const HistoryProfile = () => {
       setPerformace(null);
     }
 
-    setLoading(false)
+    setLoading(false);
   }, [userId]);
 
-  if(loading) {
-    return <p>Loading ...</p>
+  if (loading) {
+    return <p>Loading ...</p>;
   }
 
   return (
@@ -65,7 +77,11 @@ const HistoryProfile = () => {
           <p className="text-gray-700">{userData.bio}</p>
         </div>
         <div className="flex justify-end">
-          <button style={{ backgroundColor: "#CB8342" }} className=" text-white px-4 py-2 rounded-md">
+          <button
+            onClick={handleLogout}
+            style={{ backgroundColor: "#CB8342" }}
+            className=" text-white px-4 py-2 rounded-md"
+          >
             Logout
           </button>
         </div>

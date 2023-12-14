@@ -22,33 +22,32 @@ const handleSignUp = (e)=>{
     e.preventDefault();
     setIsLoading(true);
     axios({
-        method:"POST",
-        url:"https://afriroot.onrender.com/auth/register/",
-        data: {
-            name: name,
-            password: password,
-            phone: phone,
-            email: email,
-        },
-        headers:{
-            "Content-Type": "application/json"
-        }
-    }).then((response)=>{
+      method: "POST",
+      url: "https://afriroot.onrender.com/auth/register/",
+      data: {
+        name: name,
+        password: password,
+        phone: phone,
+        email: email,
+      },
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => {
         console.log(response);
         toast.success(response.data.message);
-        localStorage.setItem("token",response.data.access_token );
+        localStorage.setItem("token", response.data.access_token);
         localStorage.setItem("user", JSON.stringify(response.data.user));
-        setTimeout(()=>{
-            navigate("/login");
-        }, 2000)
-
-    })
-    .catch((error)=>{
+        setTimeout(() => {
+          navigate("/login");
+        }, 2000);
+      })
+      .catch((error) => {
         console.log("error", error);
         toast.error(error.message);
         setIsLoading(false);
-
-    })
+      });
 }
   return (
     <>

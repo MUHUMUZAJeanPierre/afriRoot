@@ -7,17 +7,17 @@ import axios from 'axios';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { LoginUser } from '../../../features/authslice';
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Audio, ThreeDots } from "react-loader-spinner";
 
 
 const Login = () => {
     const [password,setPassword] = useState('');
     const [email, setEmail] = useState('');
-    const [isLoading, setIsLoading] = useState(false);
+   
     const navigate = useNavigate()
     const dispatch = useDispatch()
-    
+    const isLoading = useSelector((state) => state.auth.isLoading);
  const handleLoginn = () => {
    if (email && password) {
      const data = {

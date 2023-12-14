@@ -36,6 +36,18 @@ const dummyCourses = [
     year: "Democratic Republic of Congo",
     imgi: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Patrice_Lumumba%2C_1960.jpg", // Another placeholder image
   },
+  {
+    id: 7,
+    name: "Rhythm of the Earth: Unlocking the Power of African Music and Dance",
+    year: "Africa",
+    imgi: "https://static.wixstatic.com/media/207314_895761ac9f064d38bd3c89c0f83461ae~mv2.jpg/v1/fill/w_450,h_299,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/207314_895761ac9f064d38bd3c89c0f83461ae~mv2.jpg", // Another placeholder image
+  },
+  {
+    id: 8,
+    name: "YUHI V Musinga",
+    year: "Rwanda",
+    imgi: "http://t2.gstatic.com/images?q=tbn:ANd9GcQ7wzEC9Rqr2Qs42xBpwpoiAV2uF6FGS-nzCRXhXT-XIyASRlApdDYYITcIiKqpU2QXLPCR", // Another placeholder image
+  },
 ];
 
 const dummyModules = [

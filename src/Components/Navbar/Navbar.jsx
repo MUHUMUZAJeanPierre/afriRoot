@@ -40,7 +40,7 @@ const navbarClass = scrolling ? "bg-whiteScroll " : "bg-whiteScroll ";
           style={{ color: "#CB8342" }}
           className=" font-normal   text-xl italic"
         >
-          <p>AFRI ROOT</p>
+          <Link to='/'><p>AFRI ROOT</p></Link>
         </div>
 
         {/* navigation */}
